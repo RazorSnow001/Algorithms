@@ -1,13 +1,19 @@
 package RecursionRelated.Recursion;
 
-public class MergeSort implements Sort {
+public class MergeSort  implements Sort {
+
     public MergeSort() {
 
     }
+
     @Override
     public int[] sort(int[] array) {
+        long startTime=System.nanoTime();
         int[] result = mergeSort(array,0,array.length-1);
-        displayArray(result);
+        long endTime=System.nanoTime();
+        /*displayArray(result);*/
+        System.out.println("use time : "+(endTime-startTime)+"ns");
+        System.out.println("finish merge sort");
         return result;
     }
 
@@ -72,7 +78,7 @@ public class MergeSort implements Sort {
 
     public void displayArray(int[] array){
         for (int j : array) {
-            System.out.printf("%3d", j);
+            System.out.println(j);
         }
     }
 }

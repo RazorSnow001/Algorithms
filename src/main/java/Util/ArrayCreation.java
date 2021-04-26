@@ -6,7 +6,7 @@ public class ArrayCreation {
     public ArrayCreation() {
 
     }
-    private int[] create(int length){
+    public int[] create(int length){
         Random random = new Random();
         int[] array = new int[length];
         for (int i = 0; i <length ; i++) {

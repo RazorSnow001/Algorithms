@@ -1,14 +1,14 @@
 import RecursionRelated.Recursion.MergeSort;
 import RecursionRelated.Recursion.Sort;
+import Util.ArrayCreation;
 import org.testng.annotations.Test;
 
 public class MergeSortTest {
   @Test
   public void testArray(){
-      int[] array = {5,7,1,2,10,6,7,4,9,10};
+      ArrayCreation creation = new ArrayCreation();
+      int[] array = creation.create(1000);
       Sort mergeSort = new MergeSort();
       mergeSort.sort(array);
-      System.out.println();
-      System.out.println("the Git is so fun ! ");
   }
 }
