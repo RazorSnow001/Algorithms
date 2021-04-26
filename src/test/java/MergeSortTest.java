@@ -9,5 +9,6 @@ public class MergeSortTest {
       Sort mergeSort = new MergeSort();
       mergeSort.sort(array);
       System.out.println();
+      System.out.println("the Git is so fun ! ");
   }
 }
