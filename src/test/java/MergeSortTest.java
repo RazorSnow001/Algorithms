@@ -11,5 +11,6 @@ public class MergeSortTest {
       Sort mergeSort = new MergeSort();
       mergeSort.sort(array);
       System.out.println(" same group commit test ");
+      System.out.println(" why ?");
   }
 }
