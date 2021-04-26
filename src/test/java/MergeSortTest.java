@@ -10,5 +10,6 @@ public class MergeSortTest {
       int[] array = creation.create(1000);
       Sort mergeSort = new MergeSort();
       mergeSort.sort(array);
+      System.out.println(" same group commit test ");
   }
 }
