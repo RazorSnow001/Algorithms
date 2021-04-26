@@ -75,5 +75,4 @@ public class MergeSort implements Sort {
             System.out.printf("%3d", j);
         }
     }
-
 }
