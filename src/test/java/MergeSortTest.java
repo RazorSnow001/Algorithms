@@ -10,6 +10,7 @@ public class MergeSortTest {
         int[] array = creation.create(100000000);
         Sort mergeSort = new MergeSort();
         mergeSort.sort(array);
+        System.out.println("test email ");
     }
 
     private void displayArray(int[] array) {
