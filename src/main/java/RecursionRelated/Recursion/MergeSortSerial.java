@@ -45,11 +45,11 @@ public class MergeSortSerial implements Sort {
         int middleIndex = (endIndex - beginIndex) / 2;
         int[] sortedFirstHalf = mergeSortSerial(array, beginIndex, beginIndex + middleIndex);
         int[] sortedLastHalf = mergeSortSerial(array, beginIndex + middleIndex + 1, endIndex);
-        combinationOfSortedArrays(resultArray, sortedFirstHalf, sortedLastHalf);
+        CombineSortedArrays(resultArray, sortedFirstHalf, sortedLastHalf);
         return resultArray;
     }
 
-    public void combinationOfSortedArrays(int[] resultArray, int[] sortedFirstHalf, int[] sortedLastHalf) {
+    static void CombineSortedArrays(int[] resultArray, int[] sortedFirstHalf, int[] sortedLastHalf) {
         int i = 0;
         int j = 0;
         int k = 0;

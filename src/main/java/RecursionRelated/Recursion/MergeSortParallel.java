@@ -3,6 +3,8 @@ package RecursionRelated.Recursion;
 import java.util.ArrayList;
 import java.util.List;
 
+import static RecursionRelated.Recursion.MergeSortSerial.CombineSortedArrays;
+
 public class MergeSortParallel implements Runnable {
     int[] inputArray;
     int[] resultArray;
@@ -45,29 +47,7 @@ public class MergeSortParallel implements Runnable {
                     e.printStackTrace();
                 }
             }
-            combinationOfSortedArrays(resultArray, left.resultArray, right.getResultArray());
-        }
-    }
-
-    public void combinationOfSortedArrays(int[] resultArray, int[] sortedFirstHalf, int[] sortedLastHalf) {
-        int i = 0;
-        int j = 0;
-        int k = 0;
-        while (i != sortedFirstHalf.length && j != sortedLastHalf.length && k != resultArray.length) {
-            if (sortedFirstHalf[i] < sortedLastHalf[j]) {
-                resultArray[k] = sortedFirstHalf[i];
-                i++;
-            } else {
-                resultArray[k] = sortedLastHalf[j];
-                j++;
-            }
-            k++;
-        }
-        int difference = resultArray.length - k;
-        if (i == sortedFirstHalf.length) {
-            if (difference >= 0) System.arraycopy(sortedLastHalf, j, resultArray, k, difference);
-        } else {
-            if (difference >= 0) System.arraycopy(sortedFirstHalf, i, resultArray, k, difference);
+            CombineSortedArrays(resultArray, left.resultArray, right.getResultArray());
         }
     }
 }
