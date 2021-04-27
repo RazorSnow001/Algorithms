@@ -7,9 +7,14 @@ public class MergeSortTest {
     @Test
     public void testArray() {
         ArrayCreation creation = new ArrayCreation();
-        int[] array = creation.create(1000);
+        int[] array = creation.create(100000000);
         Sort mergeSort = new MergeSort();
         mergeSort.sort(array);
-        System.out.println("commit ? how to count it ?");
+    }
+
+    private void displayArray(int[] array) {
+        for (int j : array) {
+            System.out.println(j);
+        }
     }
 }

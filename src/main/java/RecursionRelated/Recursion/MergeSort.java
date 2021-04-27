@@ -13,6 +13,8 @@ public class MergeSort  implements Sort {
         long endTime=System.nanoTime();
         /*displayArray(result);*/
         System.out.println("use time : "+(endTime-startTime)+"ns");
+        System.out.println((endTime - startTime) / 1000 + " us ");
+        System.out.println((endTime - startTime) / 1000000 + " ms ");
         System.out.println("finish merge sort");
         return result;
     }
@@ -76,9 +78,5 @@ public class MergeSort  implements Sort {
         }
     }
 
-    public void displayArray(int[] array){
-        for (int j : array) {
-            System.out.println(j);
-        }
-    }
+
 }
