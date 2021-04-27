@@ -45,7 +45,7 @@ public class MergeSortParallel implements Runnable {
                     e.printStackTrace();
                 }
             }
-            combinationOfSortedArrays(resultArray, left.getResultArray(), right.getResultArray());
+            combinationOfSortedArrays(resultArray, left.resultArray, right.getResultArray());
         }
     }
 
