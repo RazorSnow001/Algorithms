@@ -32,10 +32,10 @@ public class MergeSortParallel implements Runnable {
             System.arraycopy(inputArray, 0, leftHalf, 0, leftHalf.length);
             int[] rightHalf = new int[inputArray.length - leftHalf.length];
             System.arraycopy(inputArray, leftHalf.length, rightHalf, 0, rightHalf.length);
-            MergeSortParallel left = new MergeSortParallel(leftHalf);
-            MergeSortParallel right = new MergeSortParallel(rightHalf);
-            Thread leftTask = new Thread(left);
-            Thread rightTask = new Thread(right);
+            MergeSortParallel leftSort = new MergeSortParallel(leftHalf);
+            MergeSortParallel rightSort = new MergeSortParallel(rightHalf);
+            Thread leftTask = new Thread(leftSort);
+            Thread rightTask = new Thread(rightSort);
             leftTask.start();
             threads.add(leftTask);
             rightTask.start();
@@ -47,7 +47,7 @@ public class MergeSortParallel implements Runnable {
                     e.printStackTrace();
                 }
             }
-            CombineSortedArrays(resultArray, left.resultArray, right.getResultArray());
+            CombineSortedArrays(resultArray, leftSort.resultArray, rightSort.getResultArray());
         }
     }
 }
