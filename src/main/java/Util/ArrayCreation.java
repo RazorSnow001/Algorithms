@@ -10,7 +10,7 @@ public class ArrayCreation {
         Random random = new Random();
         int[] array = new int[length];
         for (int i = 0; i <length ; i++) {
-            array[i] = random.nextInt(2000000000);
+            array[i] = random.nextInt(10);
         }
         return array;
     }
