@@ -7,6 +7,6 @@ public class TestOptimization {
         int[] input = {2, 1, 5, 6, 5, 2, 3, 3, 3, 3, 3, 3};
         LargestRectangleInHistogram search = new LargestRectangleInHistogram();
         search.bruteFindLargest(input);
-        System.out.println(" test ssh ");
+        System.out.println(" test ssh without ssr ");
     }
 }
