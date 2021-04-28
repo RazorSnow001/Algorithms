@@ -11,7 +11,7 @@ public class MergeSortSerial implements Sort {
         return mergeSortSerial(array, 0, array.length - 1);
     }
 
-    /**
+    /*
      * what is mergesort we use the mergesort to use the divide and conquer approach !
      * so suppose the mergeSort method do the sort operation
      * and it really does that . so if we use the divide and conquer method
