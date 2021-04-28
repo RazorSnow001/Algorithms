@@ -14,7 +14,7 @@ public class LargestRectangleInHistogram {
                 leftExpand++;
             }
             int currentColumnMaxArea = inputArray[i] * (rightExpand + leftExpand - 1);
-            if (currentColumnMaxArea > maxRectangle) {
+            if (currentColumnMaxArea >= maxRectangle) {
                 maxRectangle = currentColumnMaxArea;
                 recordMaxInfo[0] = i-leftExpand;
                 recordMaxInfo[1] = i+rightExpand;
