@@ -7,7 +7,7 @@ package Leetcode.Optimization;
  */
 public class MaximalRectangleTransform {
     public int findMax(int[][] input) {
-        int column = input[0].length;
+        int column =  input[0].length;
         int row = input.length;
         int[][] recordContinuity = new int[row][column];
         for (int i = 0; i < column; i++) {

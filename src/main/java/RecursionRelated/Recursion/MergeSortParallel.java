@@ -3,7 +3,7 @@ package RecursionRelated.Recursion;
 import java.util.ArrayList;
 import java.util.List;
 
-import static RecursionRelated.Recursion.MergeSortSerial.CombineSortedArrays;
+import static RecursionRelated.Recursion.MergeSort.CombineSortedArrays;
 
 public class MergeSortParallel implements Runnable {
     int[] inputArray;

@@ -1,5 +1,5 @@
 package RecursionRelated.Recursion;
 
 public interface Sort {
-     int[] sort(int[] array);
+    int[] sortSerial(int[] array);
 }

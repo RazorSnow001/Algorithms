@@ -1,14 +1,38 @@
 package RecursionRelated.Recursion;
 
-public class MergeSortSerial implements Sort {
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
-    public MergeSortSerial() {
+public class MergeSort implements Sort, Runnable {
+    public int[] getResultArray() {
+        return resultArray;
+    }
+
+    private int[] resultArray;
+    private int[] inputArray;
+    int beginIndex;
+    int endIndex;
+
+    public MergeSort(int[] inputArray, int beginIndex, int endIndex) {
+        this.inputArray = inputArray;
+        this.beginIndex = beginIndex;
+        this.endIndex = endIndex;
+        this.resultArray = new int[endIndex - beginIndex + 1];
+    }
+
+    public MergeSort() {
 
     }
 
     @Override
-    public int[] sort(int[] array) {
+    public int[] sortSerial(int[] array) {
         return mergeSortSerial(array, 0, array.length - 1);
+    }
+
+    @Override
+    public void run() {
+        this.resultArray = mergeSortParallel(inputArray, beginIndex, endIndex);
     }
 
     /*
@@ -49,6 +73,32 @@ public class MergeSortSerial implements Sort {
         return resultArray;
     }
 
+    public int[] mergeSortParallel(int[] array, int beginIndex, int endIndex) {
+        if (beginIndex == endIndex) {
+            resultArray = new int[]{array[beginIndex]};
+            return resultArray;
+        }
+        List<Thread> threads = new ArrayList<>();
+        int middleIndex = (endIndex - beginIndex) / 2;
+        MergeSort leftSort = new MergeSort(array, beginIndex, beginIndex + middleIndex);
+        MergeSort rightSort = new MergeSort(array, beginIndex + middleIndex + 1, endIndex);
+        Thread leftTask = new Thread(leftSort);
+        leftTask.start();
+        for (Thread thread : threads) {
+            try {
+                thread.join();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+        Thread rightTask = new Thread(rightSort);
+        rightTask.start();
+        int[] sortedFirstHalf = leftSort.resultArray;
+        int[] sortedLastHalf = rightSort.resultArray;
+        CombineSortedArrays(resultArray, sortedFirstHalf, sortedLastHalf);
+        return resultArray;
+    }
+
     static void CombineSortedArrays(int[] resultArray, int[] sortedFirstHalf, int[] sortedLastHalf) {
         int i = 0;
         int j = 0;
@@ -70,6 +120,4 @@ public class MergeSortSerial implements Sort {
             if (difference >= 0) System.arraycopy(sortedFirstHalf, i, resultArray, k, difference);
         }
     }
-
-
 }
