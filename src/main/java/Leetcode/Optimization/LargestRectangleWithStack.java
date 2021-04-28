@@ -34,7 +34,7 @@ public class LargestRectangleWithStack {
         while (stack.peek() != -1) {
             maxArea = getMaxArea(input, stack, maxArea, traverseIndex, recordMaxInfo);
         }
-        display(recordMaxInfo);
+       /* display(recordMaxInfo);*/
         return maxArea;
     }
 

@@ -21,7 +21,7 @@ public class ArrayCreation {
         Random random = new Random();
         for (int i = 0; i < row; i++) {
             for (int j = 0; j < column; j++) {
-                matrix[i][j] = random.nextInt(20)>10?1:0;
+                matrix[i][j] = random.nextInt(20) > 10 ? 1 : 0;
             }
         }
         return matrix;
