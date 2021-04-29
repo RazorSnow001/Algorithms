@@ -1,9 +1,5 @@
 package RecursionRelated.Recursion;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 public class MergeSort implements Sort, Runnable {
     public int[] getResultArray() {
         return resultArray;
@@ -73,24 +69,20 @@ public class MergeSort implements Sort, Runnable {
         return resultArray;
     }
 
+    /*something is wrong but we have so many problems but concurrency programming is just
+     * so interesting
+     *  1 how to use debug to analysis a concurrency program  in idea
+     *  2 do we can write some thing in the run method which is a method ? */
     public int[] mergeSortParallel(int[] array, int beginIndex, int endIndex) {
         if (beginIndex == endIndex) {
             resultArray = new int[]{array[beginIndex]};
             return resultArray;
         }
-        List<Thread> threads = new ArrayList<>();
         int middleIndex = (endIndex - beginIndex) / 2;
         MergeSort leftSort = new MergeSort(array, beginIndex, beginIndex + middleIndex);
         MergeSort rightSort = new MergeSort(array, beginIndex + middleIndex + 1, endIndex);
         Thread leftTask = new Thread(leftSort);
         leftTask.start();
-        for (Thread thread : threads) {
-            try {
-                thread.join();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
         Thread rightTask = new Thread(rightSort);
         rightTask.start();
         int[] sortedFirstHalf = leftSort.resultArray;

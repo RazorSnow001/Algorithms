@@ -5,7 +5,7 @@ import Leetcode.Optimization.MaximalRectangleTransform;
 import Util.ArrayCreation;
 import org.testng.annotations.Test;
 
-public class TestOptimization {
+public class OptimizationTest {
     @Test
     public void testLargestRectangle() {
         int[] input = {2, 1, 5, 6, 5, 2, 3, 3, 3};
@@ -25,16 +25,15 @@ public class TestOptimization {
         ArrayCreation creation = new ArrayCreation();
         int[][] result = creation.createTwoDimensionalArrayWith01(5, 6);
         displayTwoDimensionalArray(result);
-        MaximalRectangle getMax = new MaximalRectangle();
         System.out.println();
-        System.out.println(getMax.maximalRectangle(result));
-
+        MaximalRectangle getMax = new MaximalRectangle();
+        System.out.println("max is " + getMax.maximalRectangle(result));
     }
 
     @Test
     public void testMaxRectangleTransform() {
         ArrayCreation creation = new ArrayCreation();
-        int[][] result = creation.createTwoDimensionalArrayWith01(5, 5);
+        int[][] result = creation.createTwoDimensionalArrayWith01(10, 10);
         displayTwoDimensionalArray(result);
         MaximalRectangleTransform transform = new MaximalRectangleTransform();
         int max = transform.findMax(result);
@@ -69,8 +68,8 @@ public class TestOptimization {
     }
 
     private void displayArray(int[] input) {
-        for (int i = 0; i < input.length; i++) {
-            System.out.printf("%3d", input[i]);
+        for (int j : input) {
+            System.out.printf("%3d", j);
         }
     }
 }
