@@ -3,9 +3,6 @@ import Leetcode.List.ListNode;
 import Util.ArrayCreation;
 import Util.ListCreateWithReverseOrder;
 import org.testng.annotations.Test;
-import org.w3c.dom.ls.LSException;
-
-import java.util.Arrays;
 
 public class ListTest {
     @Test
@@ -30,7 +27,6 @@ public class ListTest {
         AddTwoNumbers add = new AddTwoNumbers();
         ListNode list3 = add.addTwoNumbers(list1, list2);
         displayList(list3);
-
     }
 
     private void displayList(ListNode list) {

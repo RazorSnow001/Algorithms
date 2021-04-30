@@ -28,7 +28,7 @@ public class MergeSort implements Sort, Runnable {
 
     @Override
     public void run() {
-        this.resultArray = mergeSortParallel(inputArray, beginIndex, endIndex);
+        mergeSortParallel(inputArray, beginIndex, endIndex);
     }
 
     /*
@@ -73,22 +73,31 @@ public class MergeSort implements Sort, Runnable {
      * so interesting
      *  1 how to use debug to analysis a concurrency program  in idea
      *  2 do we can write some thing in the run method which is a method ? */
-    public int[] mergeSortParallel(int[] array, int beginIndex, int endIndex) {
+    public void mergeSortParallel(int[] array, int beginIndex, int endIndex) {
         if (beginIndex == endIndex) {
             resultArray = new int[]{array[beginIndex]};
-            return resultArray;
+            return;
         }
         int middleIndex = (endIndex - beginIndex) / 2;
         MergeSort leftSort = new MergeSort(array, beginIndex, beginIndex + middleIndex);
         MergeSort rightSort = new MergeSort(array, beginIndex + middleIndex + 1, endIndex);
         Thread leftTask = new Thread(leftSort);
         leftTask.start();
+        try {
+            leftTask.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         Thread rightTask = new Thread(rightSort);
         rightTask.start();
+        try {
+            rightTask.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         int[] sortedFirstHalf = leftSort.resultArray;
         int[] sortedLastHalf = rightSort.resultArray;
         CombineSortedArrays(resultArray, sortedFirstHalf, sortedLastHalf);
-        return resultArray;
     }
 
     static void CombineSortedArrays(int[] resultArray, int[] sortedFirstHalf, int[] sortedLastHalf) {

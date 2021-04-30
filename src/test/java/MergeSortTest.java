@@ -36,11 +36,16 @@ public class MergeSortTest {
     @Test
     public void testParallelV2() {
         ArrayCreation creation = new ArrayCreation();
-        int[] array = creation.create(2);
+        int[] array = creation.create(10);
         System.out.println(Arrays.toString(array));
         MergeSort mergeSort = new MergeSort(array, 0, array.length - 1);
         Thread sortParallel = new Thread(mergeSort);
         sortParallel.start();
+        try {
+            sortParallel.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         System.out.println(Arrays.toString(mergeSort.getResultArray()));
     }
 
