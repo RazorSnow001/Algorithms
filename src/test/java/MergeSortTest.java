@@ -63,7 +63,6 @@ public class MergeSortTest {
         System.out.println((endTime - startTime) / 1000000 + " ms ");
         System.out.println("finish merge sort serial");
         System.out.println();
-
         long start = System.nanoTime();
         MergeSortParallel task = new MergeSortParallel(array);
         Thread thread = new Thread(task);
