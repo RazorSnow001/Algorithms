@@ -23,5 +23,4 @@ public class LongestSubstringWithoutRepeatingCharacters {
         }
         return max;
     }
-
 }
