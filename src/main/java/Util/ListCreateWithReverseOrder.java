@@ -9,15 +9,16 @@ public class ListCreateWithReverseOrder {
     public int[] input;
 
     public ListCreateWithReverseOrder(int[] input) {
-        this.list = new ListNode();
+        this.list = null;
         this.input = input;
-        list.val = input[0];
     }
 
     public void reverseCreate() {
-        for (int i = 1; i < input.length; i++) {
+        for (int i = 0; i < input.length; i++) {
             ListNode node = new ListNode(input[i]);
-            node.next = list;
+            if (i != 0) {
+                node.next = list;
+            }
             list = node;
         }
         displayList();

@@ -11,8 +11,6 @@ public class ListTest {
         int[] input = createArray.create(10);
         ListCreateWithReverseOrder createList = new ListCreateWithReverseOrder(input);
         createList.reverseCreate();
-        System.out.println("test new theme");
-        System.out.println("test pull project");
     }
 
     @Test
