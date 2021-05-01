@@ -1,7 +1,5 @@
 package Search;
 
-import java.util.Arrays;
-
 public class MedianOfTwoSortedArrays {
     /*in this implementation we actually want to
      * search the cut point of the inputA or inputB
