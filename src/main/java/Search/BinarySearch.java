@@ -17,23 +17,21 @@ public class BinarySearch implements Search {
 
     @Override
     public int search() {
-        int resultIndex = -1;
         Arrays.sort(input);
         System.out.println();
         System.out.println(Arrays.toString(input));
         int middle = (endIndex - beginIndex) / 2 + beginIndex;
-        while (beginIndex < endIndex) {
+        while (beginIndex <= endIndex) {
             if (input[middle] == key) {
-                resultIndex = middle;
-                break;
+                return middle;
             }
             if (input[middle] > key) {
-                endIndex = endIndex - 1;
+                endIndex = middle - 1;
             } else {
-                beginIndex = beginIndex + 1;
+                beginIndex = middle + 1;
             }
             middle = (endIndex - beginIndex) / 2 + beginIndex;
         }
-        return resultIndex;
+        return -1;
     }
 }
