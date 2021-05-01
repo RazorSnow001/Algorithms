@@ -10,7 +10,7 @@ public class MergeSortTest {
     @Test
     public void testArray() {
         ArrayCreation creation = new ArrayCreation();
-        int[] array = creation.create(10);
+        int[] array = creation.create(10,10);
         System.out.println(Arrays.toString(array));
         Sort mergeSort = new MergeSort();
         System.out.println(Arrays.toString(mergeSort.sortSerial(array)));
@@ -19,7 +19,7 @@ public class MergeSortTest {
     @Test
     public void testParallel() {
         ArrayCreation creation = new ArrayCreation();
-        int[] array = creation.create(10);
+        int[] array = creation.create(10,10);
         System.out.println(Arrays.toString(array));
         MergeSortParallel task = new MergeSortParallel(array);
         Thread thread = new Thread(task);
@@ -36,7 +36,7 @@ public class MergeSortTest {
     @Test
     public void testParallelV2() {
         ArrayCreation creation = new ArrayCreation();
-        int[] array = creation.create(10);
+        int[] array = creation.create(10,10);
         System.out.println(Arrays.toString(array));
         MergeSort mergeSort = new MergeSort(array, 0, array.length - 1);
         Thread sortParallel = new Thread(mergeSort);
@@ -52,7 +52,7 @@ public class MergeSortTest {
     @Test
     public void compare() {
         ArrayCreation creation = new ArrayCreation();
-        int[] array = creation.create(15);
+        int[] array = creation.create(15,15);
         long startTime = System.nanoTime();
         Sort mergeSort = new MergeSort();
         int[] serialResult = mergeSort.sortSerial(array);

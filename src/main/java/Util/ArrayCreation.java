@@ -7,11 +7,11 @@ public class ArrayCreation {
 
     }
 
-    public int[] create(int length) {
+    public int[] create(int length,int bound) {
         Random random = new Random();
         int[] array = new int[length];
         for (int i = 0; i < length; i++) {
-            array[i] = random.nextInt(10);
+            array[i] = random.nextInt(bound);
         }
         return array;
     }
@@ -25,5 +25,11 @@ public class ArrayCreation {
             }
         }
         return matrix;
+    }
+
+    public void displayArray(int[] input) {
+        for (int j : input) {
+            System.out.printf("%3d", j);
+        }
     }
 }

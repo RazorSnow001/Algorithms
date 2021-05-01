@@ -8,7 +8,7 @@ public class ListTest {
     @Test
     public void testList() {
         ArrayCreation createArray = new ArrayCreation();
-        int[] input = createArray.create(10);
+        int[] input = createArray.create(10,10);
         ListCreateWithReverseOrder createList = new ListCreateWithReverseOrder(input);
         createList.reverseCreate();
     }
@@ -16,8 +16,8 @@ public class ListTest {
     @Test
     public void testListSum() {
         ArrayCreation createArray = new ArrayCreation();
-        int[] input1 = createArray.create(3);
-        int[] input2 = createArray.create(5);
+        int[] input1 = createArray.create(3,10);
+        int[] input2 = createArray.create(5,10);
         ListCreateWithReverseOrder createList = new ListCreateWithReverseOrder(input1);
         createList.reverseCreate();
         ListNode list1 = createList.list;
