@@ -9,7 +9,7 @@ public class MedianOfTwoSortedArraysTest {
      public  void test(){
          MedianOfTwoSortedArrays find = new MedianOfTwoSortedArrays();
          ArrayCreation creation = new ArrayCreation();
-         int[] input = creation.create(4, 20);
+         int[] input = creation.create(3, 20);
          ArrayCreation creation2 = new ArrayCreation();
          int[] input2 = creation2.create(4, 20);
          Arrays.sort(input);
