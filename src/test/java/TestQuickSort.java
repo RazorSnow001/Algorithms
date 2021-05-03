@@ -6,7 +6,7 @@ public class TestQuickSort {
     @Test
     public void test() {
         ArrayCreation creation = new ArrayCreation();
-        int[] input = creation.create(10, 10);
+        int[] input = creation.create(20, 10);
         creation.displayArray(input);
       /*  int[] input = {1,3,8};
         ArrayCreation creation = new ArrayCreation();
