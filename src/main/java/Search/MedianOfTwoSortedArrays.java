@@ -47,10 +47,11 @@ public class MedianOfTwoSortedArrays {
             rightA = (beginIndex == inputA.length) ? MAX : inputA[cutOfA];
             leftB = (rightA == MAX) ? MIN : inputB[cutOfB - 1];
             rightB = (leftA == MIN) ? MAX : inputB[cutOfB];
-            if (leftA <= inputB[cutOfB] && inputB[cutOfB - 1] <= rightA) {
+            if (leftA <= inputB[cutOfB] && leftB <= rightA) {
                 int maxLeft = Math.max(leftA, leftB);
-                median = (sumLength % 2 == 0) ? (double) (maxLeft + Math.min(rightA, rightB)) / 2
-                        : maxLeft;
+                int minRight = Math.min(rightA, rightB);
+                median = (sumLength % 2 == 0) ? (double) (maxLeft + minRight) / 2
+                        : minRight;
                 return median;
             }
             if (rightA < leftB) {
