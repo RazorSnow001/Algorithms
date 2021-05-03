@@ -17,6 +17,7 @@ public class QuickSort {
         while (i <= j) {
             if (input[i] <= pivot) {
                 i++;
+                continue;
             }
             if (input[j] > pivot) {
                 j--;

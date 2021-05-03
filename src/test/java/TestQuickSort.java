@@ -8,6 +8,9 @@ public class TestQuickSort {
         ArrayCreation creation = new ArrayCreation();
         int[] input = creation.create(10, 10);
         creation.displayArray(input);
+      /*  int[] input = {1,3,8};
+        ArrayCreation creation = new ArrayCreation();
+        creation.displayArray(input);*/
         QuickSort sort = new QuickSort();
         sort.quickSort(input, 0, input.length - 1);
         System.out.println();
