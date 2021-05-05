@@ -22,6 +22,7 @@ public class ZigZagConversion {
             if (cur == 0) {
                 down = true;
             }
+         /*   if (curRow == 0 || curRow == numRows - 1) goingDown = !goingDown;*/
             cur += (down) ? 1 : -1;
         }
         StringBuilder result = new StringBuilder();
