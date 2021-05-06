@@ -16,7 +16,7 @@ public class RegularExpressionMatching {
         if (pattern.isEmpty()) {
             return input.isEmpty();
         }
-        boolean firstCheck = input.charAt(0) == pattern.charAt(0) || pattern.charAt(0) == '.';
+        boolean firstCheck = (!input.isEmpty()) && (input.charAt(0) == pattern.charAt(0) || pattern.charAt(0) == '.');
         if (pattern.length() >= 2 && pattern.charAt(1) == '*') {
             return firstCheck && isMatch(input.substring(1), pattern) || isMatch(input, pattern.substring(2));
         }
@@ -27,8 +27,8 @@ public class RegularExpressionMatching {
     @Test
     public void test() {
         RegularExpressionMatching test = new RegularExpressionMatching();
-        String input = "dsfatiger";
-        String pattern = ".*tige.";
+        String input = "";
+        String pattern = "c*";
         boolean result = test.isMatch(input, pattern);
         System.out.println(result);
     }

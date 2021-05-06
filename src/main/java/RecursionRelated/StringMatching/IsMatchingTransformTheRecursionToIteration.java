@@ -20,10 +20,10 @@ public class IsMatchingTransformTheRecursionToIteration {
         boolean[][] record = new boolean[input.length() + 1][pattern.length() + 1];
         /*set the original or base condition which means empty string matches ! */
         record[input.length()][pattern.length()] = true;
-        for (int i = input.length() - 1; i >= 0; i--) {
+        for (int i = input.length(); i >= 0; i--) {
             for (int j = pattern.length() - 1; j >= 0; j--) {
-                boolean firstCheck = input.charAt(i) == pattern.charAt(j) || pattern.charAt(j) == '.';
-                if (j + 1 <= pattern.length()-1 && pattern.charAt(j + 1) == '*') {
+                boolean firstCheck = (i < input.length()) && (input.charAt(i) == pattern.charAt(j) || pattern.charAt(j) == '.');
+                if (j + 1 <= pattern.length() - 1 && pattern.charAt(j + 1) == '*') {
                     record[i][j] = (firstCheck && record[i + 1][j]) || record[i][j + 2];
                 } else {
                     record[i][j] = firstCheck && record[i + 1][j + 1];
@@ -46,8 +46,8 @@ public class IsMatchingTransformTheRecursionToIteration {
     @Test
     public void test() {
         IsMatchingTransformTheRecursionToIteration test = new IsMatchingTransformTheRecursionToIteration();
-        String input = "cccadfabc";
-        String pattern = ".*abc";
+        String input = "";
+        String pattern = ".*";
         boolean result = test.isMatchBottomToTop(input, pattern);
         System.out.println(result);
     }
