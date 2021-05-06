@@ -13,8 +13,8 @@ import org.junit.Test;
  *   fail. but if we satisfy one rule we pass .*/
 public class RegularExpressionMatching {
     public boolean isMatch(String input, String pattern) {
-        if (input.isEmpty()) {
-            return pattern.isEmpty();
+        if (pattern.isEmpty()) {
+            return input.isEmpty();
         }
         boolean firstCheck = input.charAt(0) == pattern.charAt(0) || pattern.charAt(0) == '.';
         if (pattern.length() >= 2 && pattern.charAt(1) == '*') {
@@ -27,8 +27,8 @@ public class RegularExpressionMatching {
     @Test
     public void test() {
         RegularExpressionMatching test = new RegularExpressionMatching();
-        String input = "cccccabc";
-        String pattern = "c*ab.";
+        String input = "dsfatiger";
+        String pattern = ".*tige.";
         boolean result = test.isMatch(input, pattern);
         System.out.println(result);
     }
