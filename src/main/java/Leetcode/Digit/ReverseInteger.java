@@ -26,7 +26,7 @@ public class ReverseInteger {
     @Test
     public void test() {
         ReverseInteger reverseInteger = new ReverseInteger();
-        int result = reverseInteger.reverse(-1230);
+        int result = reverseInteger.reverse(120);
         System.out.println(result);
     }
 }
