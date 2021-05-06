@@ -25,6 +25,8 @@ public class Permutation {
                     list.add(0, current);
                     resultList.add(list);
                 }
+                /*core part the backtrace is actually recursion with back ! modify ! revoke the modify
+                *  */
                 record[i] = 0;
                 labelNum--;
             }
@@ -34,8 +36,7 @@ public class Permutation {
 
     public List<List<Integer>> getPermutation(List<Integer> input) {
         int[] record = new int[input.size()];
-        List<List<Integer>> result = computingPermutation(input, record, 0);
-        return result;
+        return computingPermutation(input, record, 0);
     }
 
     @Test
