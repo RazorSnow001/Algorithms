@@ -11,16 +11,16 @@ public class BTNodeTraverse {
 
     public void InOrder(BTNode node) {
         if (node != null) {
-            PreOrder(node.leftChild);
+            InOrder(node.leftChild);
             System.out.println(node.val);
-            PreOrder(node.rightChild);
+            InOrder(node.rightChild);
         }
     }
 
     public void PostOrder(BTNode node) {
         if (node != null) {
-            PreOrder(node.leftChild);
-            PreOrder(node.rightChild);
+            PostOrder(node.leftChild);
+            PostOrder(node.rightChild);
             System.out.println(node.val);
         }
     }
