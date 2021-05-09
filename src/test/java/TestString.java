@@ -9,5 +9,6 @@ public class TestString {
         IsPalindromic isPalindromic = new IsPalindromic(input);
         boolean result = isPalindromic.check(input, 0, input.length() - 1);
         System.out.println(result);
+
     }
 }
