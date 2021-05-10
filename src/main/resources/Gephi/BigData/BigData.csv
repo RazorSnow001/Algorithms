@@ -1,0 +1,26 @@
+Id,Label
+0,HDFS
+1,that is a file system for the distributed system
+2,for example in the distributed system . we start using many pieces of hardware
+3,so here are big chance for the data losing if one hardware fail
+4,so we need some you know copy operation to decrease risk
+5,HDFS have such function but kind of different ?
+6,the second problem is most tasks of the distributed system
+7,the data comes from different ways
+8,multiple sources MapReduce
+9,Mapreduce do some abstraction of the file reads and writes
+10,transforming into a computation over sets of keys and values
+11,two parts of the computation the map and the reduce
+12,reliable
+13,scalable
+14,storage big data
+15,analysis big data
+16,commodity hardware means some standared hardware not very special
+17,open source
+18,affordable
+19,query all your data
+20,MapReduce is a batch processing system
+21,not suitable for interactive analysis
+22,query typically take minutes or more
+23,Hadoop evole beyond batch processing
+24,
