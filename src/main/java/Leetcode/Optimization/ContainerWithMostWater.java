@@ -6,6 +6,8 @@ package Leetcode.Optimization;
  * min height and find the corresponding area and compare
  * 2 but we see the area function ok  how to use the property to reduce some
  * redundancy computing
+ * so we have another way to handle the array two index traverse with condition
+ * longer width or smaller width with longer height so we can find the overall max .
  * */
 public class ContainerWithMostWater {
     public int maxArea(int[] height) {
