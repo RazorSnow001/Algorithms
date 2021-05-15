@@ -46,7 +46,11 @@ public class RodCut {
     public static void main(String[] args) {
         int[] priceTable = {0, 1, 5, 8, 9, 10, 17, 17, 20, 24, 30};
         RodCut rodCut = new RodCut(priceTable);
-        int result = rodCut.maxProfit(9);
+        int length = 7;
+        int result = rodCut.maxProfit(length);
         System.out.println(result);
+        HowToCut howToCut = new HowToCut(priceTable);
+        howToCut.findCutWay(result, length);
+        System.out.println(howToCut.recordList);
     }
 }
