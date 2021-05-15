@@ -1,4 +1,6 @@
-package RecursionRelated.Recursion.BinaryTreeTraverse;
+package RecursionRelated.Recursion.BinaryTree.BinaryTreeTraverse;
+
+import RecursionRelated.Recursion.BinaryTree.BTNode;
 
 public class BTNodeTraverse {
     public void PreOrder(BTNode node) {

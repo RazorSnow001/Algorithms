@@ -1,9 +1,9 @@
-package RecursionRelated.Recursion.BinaryTreeTraverse;
+package RecursionRelated.Recursion.BinaryTree;
 
 public class BTNode {
-    int val;
-    BTNode leftChild;
-    BTNode rightChild;
+    public int val;
+    public BTNode leftChild;
+    public BTNode rightChild;
 
     public BTNode() {
 
