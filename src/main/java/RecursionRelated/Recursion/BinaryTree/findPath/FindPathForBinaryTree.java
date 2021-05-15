@@ -9,10 +9,10 @@ import java.util.List;
  * that is very useful in a lot of the problems such as DP and
  * a lot of recursion */
 public class FindPathForBinaryTree {
-    public List<List<Integer>> recordList;
+    public ArrayList<List<Integer>> recordList;
 
     public FindPathForBinaryTree() {
-        this.recordList = new ArrayList();
+        this.recordList = new ArrayList<>();
     }
 
     public void findPath(BTNode root, int target, List<Integer> onePath
