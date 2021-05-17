@@ -33,6 +33,5 @@ public class DynamicProgramming_RodCut {
         HowToCut howToCut = new HowToCut(priceTable);
         howToCut.findCutWay(maxProfit, 20);
         System.out.println(howToCut.recordList);
-
     }
 }
