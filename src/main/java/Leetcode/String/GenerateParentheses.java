@@ -31,7 +31,7 @@ public class GenerateParentheses {
     public void generate() {
         if (leftBracketNum == input && rightBracketNum == input) {
             ValidParentheses validParentheses = new ValidParentheses();
-            if (validParentheses.isValid(stringBuffer.toString())) {;
+            if (validParentheses.isValid(stringBuffer.toString())) {
                 resultList.add(stringBuffer.toString());
             }
         }
