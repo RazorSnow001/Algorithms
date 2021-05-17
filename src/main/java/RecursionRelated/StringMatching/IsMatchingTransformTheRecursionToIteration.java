@@ -14,6 +14,9 @@ import org.junit.Test;
  *  so in this problem " "  = " "
  *  so we have two string . and the previous recursion program ask if these two string matches ?
  *  so it indicates that from the begin to the end this two string matches !
+ *
+ * but why we need to use the DP to modify the original recursion ?
+ * because of the overlap problem duplicate computing !
  * */
 public class IsMatchingTransformTheRecursionToIteration {
     public boolean isMatchBottomToTop(String input, String pattern) {

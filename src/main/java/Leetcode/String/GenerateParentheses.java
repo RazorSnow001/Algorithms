@@ -52,7 +52,7 @@ public class GenerateParentheses {
     }
 
     public static void main(String[] args) {
-        GenerateParentheses generateParentheses = new GenerateParentheses(4);
+        GenerateParentheses generateParentheses = new GenerateParentheses(2);
         generateParentheses.generate();
         System.out.println(generateParentheses.resultList);
     }
