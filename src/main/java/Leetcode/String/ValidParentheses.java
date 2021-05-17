@@ -12,15 +12,15 @@ public class ValidParentheses {
                 stack.push(input.charAt(i));
                 continue;
             }
-            if ((input.charAt(i) == ')' && stack.peek() == '(')) {
+            if ((input.charAt(i) == ')' && !stack.isEmpty() && stack.peek() == '(')) {
                 stack.pop();
                 continue;
             }
-            if ((input.charAt(i) == ']' && stack.peek() == '[')) {
+            if ((input.charAt(i) == ']' && !stack.isEmpty() && stack.peek() == '[')) {
                 stack.pop();
                 continue;
             }
-            if ((input.charAt(i) == '}' && stack.peek() == '{')) {
+            if ((input.charAt(i) == '}' && !stack.isEmpty() && stack.peek() == '{')) {
                 stack.pop();
             }
         }
