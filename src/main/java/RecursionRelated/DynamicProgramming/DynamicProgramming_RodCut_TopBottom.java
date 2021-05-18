@@ -8,7 +8,12 @@ public class DynamicProgramming_RodCut_TopBottom {
         this.priceTable = priceTable;
     }
 
-    public int recordTheMaxProfit(int length, int[] recordArray) {
+    public int findMax(int length) {
+        int[] record = new int[length + 1];
+        return recordTheMaxProfit(length, record);
+    }
+
+    private int recordTheMaxProfit(int length, int[] recordArray) {
         if (length == 0) {
             return 0;
         }
@@ -28,8 +33,7 @@ public class DynamicProgramming_RodCut_TopBottom {
         int[] priceTable = {0, 1, 5, 8, 9, 10, 17, 17, 20, 24, 30};
         DynamicProgramming_RodCut_TopBottom findMax
                 = new DynamicProgramming_RodCut_TopBottom(priceTable);
-        int[] record = new int[21];
-        int result = findMax.recordTheMaxProfit(20, record);
+        int result = findMax.findMax(20);
         System.out.println(result);
     }
 }
