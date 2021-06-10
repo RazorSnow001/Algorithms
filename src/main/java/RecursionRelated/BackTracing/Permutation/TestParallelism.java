@@ -7,9 +7,14 @@ import java.util.concurrent.ForkJoinTask;
 
 public class TestParallelism {
     public static void main(String[] args) {
-        List<Integer> input = Arrays.asList(1, 2, 1,2);
+        long startTime = System.nanoTime();
+        List<Integer> input = Arrays.asList(1, 1, 2, 3);
+        input.sort(Integer::compareTo);
         ForkJoinTask<List<List<Integer>>> task = new PermutationWithParallelism(input);
-        System.out.println(new ForkJoinPool().invoke(task));
+        List<List<Integer>> result = new ForkJoinPool().invoke(task);
+        System.out.println(result.size());
+        long endTime = System.nanoTime();
+        System.out.println(endTime - startTime);
     }
 
 }

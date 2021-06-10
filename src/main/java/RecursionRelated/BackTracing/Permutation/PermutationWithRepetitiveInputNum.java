@@ -4,7 +4,6 @@ import java.util.*;
 
 public class PermutationWithRepetitiveInputNum {
     public List<List<Integer>> getPermutation(List<Integer> input) {
-        input.sort(Integer::compareTo);
         int[] record = new int[input.size()];
         return computingPermutation(input, record, 0);
     }
@@ -25,8 +24,6 @@ public class PermutationWithRepetitiveInputNum {
                 labelNum++;
                 record[i] = 1;
                 List<List<Integer>> partialResult = computingPermutation(input, record, labelNum);
-                record[i] = 0;
-                labelNum--;
                 if (partialResult.size() != 0) {
                     for (List<Integer> list :
                             partialResult) {
@@ -34,16 +31,23 @@ public class PermutationWithRepetitiveInputNum {
                         result.add(list);
                     }
                 }
+                record[i] = 0;
+                labelNum--;
             }
         }
         return result;
     }
 
     public static void main(String[] args) {
-        List<Integer> input = Arrays.asList(1, 2, 1,2);
+        long startTime = System.nanoTime();
+        List<Integer> input = Arrays.asList(1, 1, 2, 3);
+        input.sort(Integer::compareTo);
         PermutationWithRepetitiveInputNum permutationWithRepetitiveInputNum
                 = new PermutationWithRepetitiveInputNum();
+        System.out.println();
         List<List<Integer>> result = permutationWithRepetitiveInputNum.getPermutation(input);
-        System.out.println(result);
+        System.out.println(result.size());
+        long endTime = System.nanoTime();
+        System.out.println(endTime - startTime);
     }
 }

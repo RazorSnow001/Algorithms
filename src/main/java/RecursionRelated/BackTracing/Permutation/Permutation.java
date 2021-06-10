@@ -45,7 +45,7 @@ public class Permutation {
 
     @Test
     public void test() {
-        List<Integer> input = Arrays.asList(1, 1, 2, 3);
+        List<Integer> input = Arrays.asList(1, 2);
         Permutation permutation = new Permutation();
         System.out.println(permutation.getPermutation(input));
     }
