@@ -45,8 +45,5 @@ public class PermutationWithRepetitiveInputNum {
                 = new PermutationWithRepetitiveInputNum();
         List<List<Integer>> result = permutationWithRepetitiveInputNum.getPermutation(input);
         System.out.println(result);
-
     }
-
-
 }
