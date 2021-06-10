@@ -16,5 +16,4 @@ public class TestParallelism {
         long endTime = System.nanoTime();
         System.out.println(endTime - startTime);
     }
-
 }
