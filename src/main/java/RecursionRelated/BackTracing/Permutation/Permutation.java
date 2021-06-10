@@ -1,14 +1,17 @@
-package RecursionRelated.BackTracing;
+package RecursionRelated.BackTracing.Permutation;
 
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
+
+import static java.util.stream.Collectors.toList;
 
 public class Permutation {
     public List<List<Integer>> computingPermutation(List<Integer> input, int[] record, int labelNum) {
         List<List<Integer>> resultList = new ArrayList<>();
-
         for (int i = 0; i < input.size(); i++) {
             if (record[i] == 0 && labelNum == input.size() - 1) {
                 List<Integer> single = new ArrayList<>();
@@ -26,7 +29,7 @@ public class Permutation {
                     resultList.add(list);
                 }
                 /*core part the backtrace is actually recursion with back ! modify ! revoke the modify
-                *  */
+                 *  */
                 record[i] = 0;
                 labelNum--;
             }
@@ -36,15 +39,13 @@ public class Permutation {
 
     public List<List<Integer>> getPermutation(List<Integer> input) {
         int[] record = new int[input.size()];
-        return computingPermutation(input, record, 0);
+        List<List<Integer>> rawResult = computingPermutation(input, record, 0);
+        return rawResult.stream().distinct().collect(toList());
     }
 
     @Test
     public void test() {
-        List<Integer> input = new ArrayList<>();
-        input.add(1);
-        input.add(2);
-        input.add(3);
+        List<Integer> input = Arrays.asList(1, 1, 3);
         Permutation permutation = new Permutation();
         System.out.println(permutation.getPermutation(input));
     }
