@@ -34,28 +34,30 @@ public class SudokuSolver {
             return;
         }
 
-        for (int row = 0; row < 4; row++) {
-            for (int column = 0; column < 4; column++) {
-                for (int number = 1; number <= 4; number++) {
-                    if (soduku[row][column] == 0 &&
-                            !rowLists.get(row).contains(number) &&
-                            !columnLists.get(column).contains(number) &&
-                            !blockLists.get(row / 2).get(column / 2).contains(number)) {
-                        soduku[row][column] = number;
-                        rowLists.get(row).add(number);
-                        columnLists.get(column).add(number);
-                        blockLists.get(row / 2).get(column / 2).add(number);
-                        assignStep++;
-                        getSudoku();
-                        assignStep--;
-                        soduku[row][column] = 0;
-                        rowLists.get(row).remove(number);
-                        columnLists.get(column).remove(number);
-                        blockLists.get(row / 2).get(column / 2).remove(number);
-                    }
+        int row = assignStep / 4;
+        int column = assignStep % 4;
+
+        if (soduku[row][column] == 0) {
+            for (int number = 1; number <= 4; number++) {
+                if (!rowLists.get(row).contains(number) &&
+                        !columnLists.get(column).contains(number) &&
+                        !blockLists.get(row / 2).get(column / 2).contains(number)) {
+                    soduku[row][column] = number;
+                    rowLists.get(row).add(number);
+                    columnLists.get(column).add(number);
+                    blockLists.get(row / 2).get(column / 2).add(number);
+                    assignStep++;
+                    getSudoku();
+                    assignStep--;
+                    soduku[row][column] = 0;
+                    rowLists.get(row).remove(number);
+                    columnLists.get(column).remove(number);
+                    blockLists.get(row / 2).get(column / 2).remove(number);
                 }
             }
         }
+
+
     }
 
     private void display() {
