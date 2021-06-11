@@ -33,10 +33,8 @@ public class SudokuSolver {
             display();
             return;
         }
-
         int row = assignStep / 4;
         int column = assignStep % 4;
-
         if (soduku[row][column] == 0) {
             for (int number = 1; number <= 4; number++) {
                 if (!rowLists.get(row).contains(number) &&
@@ -56,8 +54,6 @@ public class SudokuSolver {
                 }
             }
         }
-
-
     }
 
     private void display() {
