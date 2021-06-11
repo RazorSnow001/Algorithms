@@ -10,17 +10,17 @@ public class SudokuSolver {
     List<Set<Integer>> rowLists = new ArrayList<>();
     List<Set<Integer>> columnLists = new ArrayList<>();
     List<List<Set<Integer>>> blockLists = new ArrayList<>();
-    int[][] soduku = new int[9][9];
+    int[][] soduku = new int[4][4];
     int assignStep = 0;
 
     public SudokuSolver() {
-        for (int i = 0; i < 9; i++) {
+        for (int i = 0; i < 4; i++) {
             this.rowLists.add(new HashSet<>());
         }
-        for (int i = 0; i < 9; i++) {
+        for (int i = 0; i < 4; i++) {
             this.columnLists.add(new HashSet<>());
         }
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 4; i++) {
             blockLists.add(new ArrayList<>());
             for (int j = 0; j < 3; j++) {
                 blockLists.get(i).add(new HashSet<>());
