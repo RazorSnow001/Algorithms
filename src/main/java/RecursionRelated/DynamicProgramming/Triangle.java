@@ -31,8 +31,8 @@ public class Triangle {
         List<List<Integer>> input = new ArrayList<>();
         input.add(Collections.singletonList(2));
         input.add(Arrays.asList(3,1));
-        input.add(Arrays.asList(6,5,2));
-        input.add(Arrays.asList(4,1,2,3));
+        input.add(Arrays.asList(1,5,2));
+        input.add(Arrays.asList(0,1,2,3));
         Triangle triangle  = new Triangle(input);
         int result = triangle.minimumTotal(0,0);
         System.out.println(result);
