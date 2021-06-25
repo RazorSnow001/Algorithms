@@ -35,7 +35,7 @@ public class SudokuSolver {
         int row = assignStep / 9;
         int column = assignStep % 9;
         if (soduku[row][column] == 0) {
-            for (int number = 1; number <= 9; number++) {
+            for (int number = 9; number >=1; number--) {
                 if (!rowLists.get(row).contains(number) &&
                         !columnLists.get(column).contains(number) &&
                         !blockLists.get(row / 3).get(column / 3).contains(number)) {
