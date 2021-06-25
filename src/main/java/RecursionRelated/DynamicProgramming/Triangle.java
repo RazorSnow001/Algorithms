@@ -1,7 +1,5 @@
 package RecursionRelated.DynamicProgramming;
 
-import org.junit.Test;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -33,6 +31,7 @@ public class Triangle {
         input.add(Arrays.asList(3,1));
         input.add(Arrays.asList(1,5,2));
         input.add(Arrays.asList(0,1,2,3));
+        input.add(Arrays.asList(2,1,1,3,1));
         Triangle triangle  = new Triangle(input);
         int result = triangle.minimumTotal(0,0);
         System.out.println(result);
