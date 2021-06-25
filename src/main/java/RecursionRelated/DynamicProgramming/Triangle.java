@@ -30,9 +30,9 @@ public class Triangle {
     public static void main(String[] args) {
         List<List<Integer>> input = new ArrayList<>();
         input.add(Collections.singletonList(2));
-        input.add(Arrays.asList(3,4));
-        input.add(Arrays.asList(6,5,7));
-        input.add(Arrays.asList(4,1,8,3));
+        input.add(Arrays.asList(3,1));
+        input.add(Arrays.asList(6,5,2));
+        input.add(Arrays.asList(4,1,2,3));
         Triangle triangle  = new Triangle(input);
         int result = triangle.minimumTotal(0,0);
         System.out.println(result);
