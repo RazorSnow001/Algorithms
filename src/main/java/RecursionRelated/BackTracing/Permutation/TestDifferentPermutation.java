@@ -8,7 +8,7 @@ import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.ForkJoinTask;
 
 public class TestDifferentPermutation {
-    List<Integer> input = Arrays.asList(1, 1, 2, 3,5,6,7);
+    List<Integer> input = Arrays.asList(1, 1, 2, 3, 5, 6, 7);
 
     @Test
     public void testSerial() {
