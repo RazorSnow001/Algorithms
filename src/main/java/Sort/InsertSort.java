@@ -28,6 +28,10 @@ public class InsertSort {
             int key = input[i];
             int insertPosition = 0;
             for (int j = i - 1; j >= 1; j--) {
+                if(input[j]<=key){
+                    insertPosition = i;
+                    break;
+                }
                 if (input[j - 1] <= key && key <= input[j]) {
                     insertPosition = j;
                     break;
@@ -41,7 +45,7 @@ public class InsertSort {
     }
 
     public static void main(String[] args) {
-        int[] input = {-1, 6, 3, 2, 6, 4, 2};
+        int[] input = {-1, 1, 2, 3, 4, 5, 6};
         InsertSort sort = new InsertSort();
         sort.sort(input);
         System.out.println(Arrays.toString(input));
