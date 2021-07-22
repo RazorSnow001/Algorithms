@@ -1,7 +1,10 @@
 package RecursionRelated.DynamicProgramming.GreedyAlgorithm;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
+import java.util.Optional;
+
 /*ok 1 we have noticed that --- a greedy algorithm can reduce the branches of the
 *  dynamic programming . we just consider the best choice .so we just remain only
 *  one selection . so the main case of the greedy algorithms is why ? not how ?
@@ -61,7 +64,22 @@ import java.util.List;
 *       so using the greedy algorithm you can get it maybe even not one . but
 *       that is the sub set of the corresponding dynamic programming result . ok
 *
-*
+*       so the core thing now is that ! how to prove the greedy selection is safe ?
+*       that have multiple methods but now from the current activity selection problem
+*       we get some kind of you know easy way to think .
+*       we need to prove the global earliest finished activity -- am --- Sk
+*       is in one of the optimal solution --- the set
+*       so we have a optimal solution Ak because of the increase of the finish time
+*       here is aj in the Ak represent the earliest finished activity
+*       but am is global . so fam <= faj
+*       1 if am = aj that is nature . am is already in the Ak ----- a optimal solution
+*       2 if am != aj . so fm<=fj . so if we replace am with aj that will be valid .
+*       no contradiction of that ! so we got a Ak' . but the size of the Ak is the result
+*       note that just the result of the problem but not the solution
+*       so Ak'=Ak same size . and Ak represent one of the optimal solution .
+*       so any solution <= Ak
+*       so Ak' is actually a optimal solution which contains the am
+*       so we prove the safety of the greedy selection !
 *
         after get that we have proved every potential greedy item will be in the
         optimal solution set .
@@ -72,7 +90,40 @@ import java.util.List;
 *   */
 public class ActivitySelection {
     private List<Activity> activities = new ArrayList<>();
-    public void getTheBestActivities() {
+    private Integer sizeOfActivities = 0;
+    private Integer optimalSolutionSize = 0;
+    private Integer finishedTime = 0;
 
+    public ActivitySelection(List<Activity> activities) {
+        this.activities = activities;
+        this.sizeOfActivities = activities.size();
+    }
+
+    public void getOptimalSolutionSize() {
+        Comparator<Integer> comparator = Comparator.comparing(Integer::intValue);
+        if (finishedTime != null && finishedTime != activities.get(sizeOfActivities - 1).getEndTime()) {
+            Optional<Integer> newFinishedTime = activities.stream().filter(activity -> activity.getStartTime() > finishedTime).map(Activity::getEndTime).min(comparator);
+            this.finishedTime = newFinishedTime.get();
+            this.optimalSolutionSize++;
+            getOptimalSolutionSize();
+        }
+    }
+
+    public static void main(String[] args) {
+        List<Activity> activities = new ArrayList<>();
+        activities.add(new Activity(1, 4));
+        activities.add(new Activity(3, 5));
+        activities.add(new Activity(0, 6));
+        activities.add(new Activity(5, 7));
+        activities.add(new Activity(3, 9));
+        activities.add(new Activity(5, 9));
+        activities.add(new Activity(6, 10));
+        activities.add(new Activity(8, 11));
+        activities.add(new Activity(8, 12));
+        activities.add(new Activity(2, 14));
+        activities.add(new Activity(12, 16));
+        ActivitySelection activitySelection = new ActivitySelection(activities);
+        activitySelection.getOptimalSolutionSize();
+        System.out.println(activitySelection.optimalSolutionSize);
     }
 }

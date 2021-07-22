@@ -1,27 +1,27 @@
 package RecursionRelated.DynamicProgramming.GreedyAlgorithm;
 
 public class Activity {
-    private String startTime;
-    private String endTime;
+    private Integer startTime;
+    private Integer endTime;
 
-    public Activity(String startTime, String endTime) {
+    public Activity(Integer startTime, Integer endTime) {
         this.startTime = startTime;
         this.endTime = endTime;
     }
 
-    public String getStartTime() {
+    public Integer getStartTime() {
         return startTime;
     }
 
-    public void setStartTime(String startTime) {
+    public void setStartTime(Integer startTime) {
         this.startTime = startTime;
     }
 
-    public String getEndTime() {
+    public Integer getEndTime() {
         return endTime;
     }
 
-    public void setEndTime(String endTime) {
+    public void setEndTime(Integer endTime) {
         this.endTime = endTime;
     }
 }
