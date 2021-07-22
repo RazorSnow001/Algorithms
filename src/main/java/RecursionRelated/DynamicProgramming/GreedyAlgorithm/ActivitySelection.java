@@ -122,6 +122,7 @@ public class ActivitySelection {
         activities.add(new Activity(8, 12));
         activities.add(new Activity(2, 14));
         activities.add(new Activity(12, 16));
+        activities.add(new Activity(16, 18));
         ActivitySelection activitySelection = new ActivitySelection(activities);
         activitySelection.getOptimalSolutionSize();
         System.out.println(activitySelection.optimalSolutionSize);
