@@ -44,23 +44,6 @@ import java.util.List;
 *       because you have to demonstrate . every time you select the base at current the
 *       potential item will be in the optimal solution set . is actually in the optimal solution set .
 *
-*       so like the activitySelection problem .
-*       Sk means the input have all the activities we can try
-*       Ak means the optimal solution set
-*       so Ak belongs to Sk and Ak maybe not just one
-*       Ak1 = Ak2 = Ak3
-*       now we just need to prove if the a1 is the greedy selection in Sk
-*       a1 will be in the Ak
-*       a1= aj not need to prove !
-*       a1!=aj s1<=sj
-        because the s1 is the global min
-        so if we replace the sj with the si
-        we got the A1 will >= Ak
-        that conflicts the big presupposition
-        Ak is the optimal solution set
-        so A1 = Ak
-        and s1 = sj
-
         after get that we have proved every potential greedy item will be in the
         optimal solution set .
         and if we have just verify the current state si is exactly the item in the optimal
