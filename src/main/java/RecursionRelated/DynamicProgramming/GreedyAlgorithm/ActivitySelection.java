@@ -102,7 +102,7 @@ public class ActivitySelection {
     public void getOptimalSolutionSize() {
         Comparator<Integer> comparator = Comparator.comparing(Integer::intValue);
         if (finishedTime != null && finishedTime != activities.get(sizeOfActivities - 1).getEndTime()) {
-            Optional<Integer> newFinishedTime = activities.stream().filter(activity -> activity.getStartTime() > finishedTime).map(Activity::getEndTime).min(comparator);
+            Optional<Integer> newFinishedTime = activities.stream().filter(activity -> activity.getStartTime() >= finishedTime).map(Activity::getEndTime).min(comparator);
             this.finishedTime = newFinishedTime.get();
             this.optimalSolutionSize++;
             getOptimalSolutionSize();
