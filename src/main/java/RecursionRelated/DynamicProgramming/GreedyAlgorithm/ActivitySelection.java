@@ -44,23 +44,25 @@ import java.util.List;
 *       because you have to demonstrate . every time you select the base at current the
 *       potential item will be in the optimal solution set . is actually in the optimal solution set .
 *
-*       so like the activitySelection problem .
-*       Sk means the input have all the activities we can try
-*       Ak means the optimal solution set
-*       so Ak belongs to Sk and Ak maybe not just one
-*       Ak1 = Ak2 = Ak3
-*       now we just need to prove if the a1 is the greedy selection in Sk
-*       a1 will be in the Ak
-*       a1= aj not need to prove !
-*       a1!=aj s1<=sj
-        because the s1 is the global min
-        so if we replace the sj with the si
-        we got the A1 will >= Ak
-        that conflicts the big presupposition
-        Ak is the optimal solution set
-        so A1 = Ak
-        and s1 = sj
-
+*       we use the  proof by contradiction to get the optimal sub construction
+*       that is really cool
+*       if cij = max {cik + ckj + 1}
+*       that means the cik and ckj represents the optimal solution too
+*       if not you mean . that .  cik is not the optimal solution .
+*       so we can find cij' > cik and so cik'+ckj +1 > cij
+*       which conflict the assumption that cij is the optimal solution . paste
+*       and contradiction method is the general method to get the you know
+*       the optimal sub construction .
+*
+*       and in the greedy method . first thing you need to know is . yes this problem
+*       is powerful but also dangerous . if you can't prove each greedy selection is
+*       ----- the element may be in the optimal solution set .and even you prove that .
+*       using the greedy you got the optimal solution but not all the optimal solution
+*       so using the greedy algorithm you can get it maybe even not one . but
+*       that is the sub set of the corresponding dynamic programming result . ok
+*
+*
+*
         after get that we have proved every potential greedy item will be in the
         optimal solution set .
         and if we have just verify the current state si is exactly the item in the optimal
