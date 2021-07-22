@@ -111,6 +111,16 @@ public class ActivitySelection {
         }
     }
 
+    public void getOptimalSolutionSizeIteration() {
+        Comparator<Integer> comparator = Comparator.comparing(Integer::intValue);
+        while(finishedTime != null && finishedTime != activities.get(sizeOfActivities - 1).getEndTime()){
+            Optional<Integer> newFinishedTime = activities.stream().filter(activity -> activity.getStartTime() >= finishedTime).map(Activity::getEndTime).min(comparator);
+            this.finishedTime = newFinishedTime.get();
+            optimalSolution.add(activities.stream().filter(activity -> activity.getEndTime().equals(finishedTime)).findFirst().orElse(null));
+            this.optimalSolutionSize++;
+        }
+    }
+
     public static void main(String[] args) {
         List<Activity> activities = new ArrayList<>();
         activities.add(new Activity(1, 4));
@@ -126,7 +136,7 @@ public class ActivitySelection {
         activities.add(new Activity(12, 16));
         activities.add(new Activity(16, 18));
         ActivitySelection activitySelection = new ActivitySelection(activities);
-        activitySelection.getOptimalSolutionSize();
+        activitySelection.getOptimalSolutionSizeIteration();
         System.out.println(activitySelection.optimalSolutionSize);
         activitySelection.optimalSolution.stream().forEach(activity -> System.out.println(activity.getStartTime() + "___" + activity.getEndTime()));
     }
