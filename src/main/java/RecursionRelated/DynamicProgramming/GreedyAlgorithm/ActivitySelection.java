@@ -138,6 +138,6 @@ public class ActivitySelection {
         ActivitySelection activitySelection = new ActivitySelection(activities);
         activitySelection.getOptimalSolutionSizeIteration();
         System.out.println(activitySelection.optimalSolutionSize);
-        activitySelection.optimalSolution.stream().forEach(activity -> System.out.println(activity.getStartTime() + "___" + activity.getEndTime()));
+        activitySelection.optimalSolution.forEach(activity -> System.out.println(activity.getStartTime() + "___" + activity.getEndTime()));
     }
 }
