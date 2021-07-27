@@ -10,10 +10,6 @@ import java.util.Arrays;
 public class QuickSortYan {
     private int[] input;
 
-    public QuickSortYan() {
-
-    }
-
     public QuickSortYan(int[] input) {
         this.input = input;
     }
