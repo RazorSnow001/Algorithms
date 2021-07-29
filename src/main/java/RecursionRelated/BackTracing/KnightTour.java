@@ -1,5 +1,9 @@
 package RecursionRelated.BackTracing;
 
+import akka.japi.Pair;
+
+import java.util.List;
+
 /*1 what is the constraint of the problem ?
  *   ok the constraint is the
  *       1  the movement of the knight
@@ -30,14 +34,22 @@ package RecursionRelated.BackTracing;
  *   so the layer indicates the step and the node value  represents the location !
  *   so the best the way to local the position so the value should be row and column
  *   so the solution is use the constraints to computing the next xi
- *   and use the backTracing to find the solution
+ *   and use the backTracing to find the solution !
+ *
+ *   so the core code will be using the constraint to compute the set of the next choices of the xi
  *
  *  */
 public class KnightTour {
     int[][] tourMap = new int[8][8];
+    int step = 0;
 
     public void findTheSolution() {
 
+
+    }
+
+    /**  with this method we will use the constraints to compute all the potential values for the next back tracing ! */
+    public List<Pair<Integer,Integer>> findTheValueSet(){
 
     }
 
