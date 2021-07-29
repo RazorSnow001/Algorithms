@@ -19,6 +19,19 @@ package RecursionRelated.BackTracing;
  *   WHERE  IS THE  the end base condition of the search
  *   ？
  *   we get the 64 ! ?
+ *   but such modeling maybe hard to code
+ *   so after the sleep we got another modeling !
+ *   so this time we use the
+ *   x1 x2 ... x64 for the step and the
+ *   value of the xi is the position of the step i
+ *   this modeling seems more potential !
+ *   and that is matching the node graph of the code !
+ *
+ *   so the layer indicates the step and the node value  represents the location !
+ *   so the best the way to local the position so the value should be row and column
+ *   so the solution is use the constraints to computing the next xi
+ *   and use the backTracing to find the solution
+ *
  *  */
 public class KnightTour {
     int[][] tourMap = new int[8][8];
