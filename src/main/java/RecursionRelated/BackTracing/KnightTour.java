@@ -48,7 +48,11 @@ public class KnightTour {
 
     }
 
-    /**  with this method we will use the constraints to compute all the potential values for the next back tracing ! */
+    /**  with this method we will use the constraints to compute all the potential values for the next back tracing !
+     *   but how to do that ?
+     *          1  the movement of the knight
+     *  *       2  the boundary condition which also limit the knight movements
+     *  *       3  each square can have only single number , no repeat numbers ---- each position we travel just once ! */
     public List<Pair<Integer,Integer>> findTheValueSet(){
 
     }
