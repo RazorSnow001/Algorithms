@@ -72,7 +72,7 @@ public class KnightTour {
     }
 
 
-    int[][] tourMap = new int[8][8];
+    int[][] tourMap = new int[5][5];
     int step = 1;
 
     List<Position> moveMent = Arrays.asList(
@@ -86,9 +86,29 @@ public class KnightTour {
             new Position(-2, -1)
     );
 
-    public void findTheSolution() {
+    public void findTheSolution(Position position) {
+        tourMap[position.row][position.column] = step;
+        if (step == 25) {
 
+            display();
+        }
+        List<Position> candidateList = findTheValueSet(position);
+        for (Position nextPosition : candidateList) {
+            step++;
+            findTheSolution(nextPosition);
+            tourMap[nextPosition.row][nextPosition.column] = 0;
+            step--;
+        }
+    }
 
+    private void display() {
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 5; j++) {
+                System.out.printf("%5d", tourMap[i][j]);
+            }
+            System.out.println();
+        }
+        System.out.println();
     }
 
     /**
@@ -108,20 +128,15 @@ public class KnightTour {
         }).filter(e -> {
             Integer row = e.row;
             Integer column = e.column;
-            boolean checkRow = (row >= 0) && (row <= 7);
-            boolean checkColumn = (column >= 0) && (column <= 7);
-            if(!checkColumn||!checkRow) return false;
+            boolean checkRow = (row >= 0) && (row <= 4);
+            boolean checkColumn = (column >= 0) && (column <= 4);
+            if (!checkColumn || !checkRow) return false;
             return tourMap[row][column] == 0;
         }).collect(Collectors.toList());
     }
 
     public static void main(String[] args) {
         KnightTour tour = new KnightTour();
-        List<Position> resultList = tour.findTheValueSet(new Position(4, 4));
-        resultList.forEach(e -> {
-            System.out.println();
-            System.out.printf("%3d", e.row);
-            System.out.printf("%3d", e.column);
-        });
+        tour.findTheSolution(new Position(0, 0));
     }
 }
