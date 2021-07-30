@@ -2,7 +2,11 @@ package RecursionRelated.BackTracing;
 
 import akka.japi.Pair;
 
+
+import java.util.Arrays;
 import java.util.List;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 /*1 what is the constraint of the problem ?
  *   ok the constraint is the
@@ -40,21 +44,84 @@ import java.util.List;
  *
  *  */
 public class KnightTour {
+
+    public static class Position {
+        Integer row;
+        Integer column;
+
+        public Integer getRow() {
+            return row;
+        }
+
+        public void setRow(Integer row) {
+            this.row = row;
+        }
+
+        public Integer getColumn() {
+            return column;
+        }
+
+        public void setColumn(Integer column) {
+            this.column = column;
+        }
+
+        public Position(Integer row, Integer column) {
+            this.row = row;
+            this.column = column;
+        }
+    }
+
+
     int[][] tourMap = new int[8][8];
-    int step = 0;
+    int step = 1;
+
+    List<Position> moveMent = Arrays.asList(
+            new Position(1, 2),
+            new Position(1, -2),
+            new Position(-1, 2),
+            new Position(-1, -2),
+            new Position(2, 1),
+            new Position(2, -1),
+            new Position(-2, 1),
+            new Position(-2, -1)
+    );
 
     public void findTheSolution() {
 
 
     }
 
-    /**  with this method we will use the constraints to compute all the potential values for the next back tracing !
-     *   but how to do that ?
-     *          1  the movement of the knight
-     *  *       2  the boundary condition which also limit the knight movements
-     *  *       3  each square can have only single number , no repeat numbers ---- each position we travel just once ! */
-    public List<Pair<Integer,Integer>> findTheValueSet(){
-
+    /**
+     * with this method we will use the constraints to compute all the potential values for the next back tracing !
+     * but how to do that ?
+     * 1  the movement of the knight
+     * *       2  the boundary condition which also limit the knight movements
+     * *       3  each square can have only single number , no repeat numbers ---- each position we travel just once !
+     */
+    public List<Position> findTheValueSet(Position currentRowColumn) {
+        Integer currentRow = currentRowColumn.row;
+        Integer currentColumn = currentRowColumn.column;
+        return moveMent.stream().map(p -> {
+            Integer newRow = p.row + currentRow;
+            Integer newColumn = p.column + currentColumn;
+            return new Position(newRow, newColumn);
+        }).filter(e -> {
+            Integer row = e.row;
+            Integer column = e.column;
+            boolean checkRow = (row >= 0) && (row <= 7);
+            boolean checkColumn = (column >= 0) && (column <= 7);
+            if(!checkColumn||!checkRow) return false;
+            return tourMap[row][column] == 0;
+        }).collect(Collectors.toList());
     }
 
+    public static void main(String[] args) {
+        KnightTour tour = new KnightTour();
+        List<Position> resultList = tour.findTheValueSet(new Position(4, 4));
+        resultList.forEach(e -> {
+            System.out.println();
+            System.out.printf("%3d", e.row);
+            System.out.printf("%3d", e.column);
+        });
+    }
 }
