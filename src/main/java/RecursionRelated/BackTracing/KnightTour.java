@@ -131,8 +131,9 @@ public class KnightTour {
         }).collect(Collectors.toList());
     }
 
+
     public static void main(String[] args) {
         KnightTour tour = new KnightTour();
-        tour.findTheSolution(new Position(0, 0));
+        tour.findTheSolution(new Position(0, 2));
     }
 }
