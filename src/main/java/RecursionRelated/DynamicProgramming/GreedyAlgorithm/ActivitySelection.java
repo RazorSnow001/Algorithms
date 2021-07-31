@@ -1,9 +1,6 @@
 package RecursionRelated.DynamicProgramming.GreedyAlgorithm;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 /*ok 1 we have noticed that --- a greedy algorithm can reduce the branches of the
 *  dynamic programming . we just consider the best choice .so we just remain only
@@ -113,7 +110,7 @@ public class ActivitySelection {
 
     public void getOptimalSolutionSizeIteration() {
         Comparator<Integer> comparator = Comparator.comparing(Integer::intValue);
-        while(finishedTime != null && finishedTime != activities.get(sizeOfActivities - 1).getEndTime()){
+        while (finishedTime != null && finishedTime != activities.get(sizeOfActivities - 1).getEndTime()) {
             Optional<Integer> newFinishedTime = activities.stream().filter(activity -> activity.getStartTime() >= finishedTime).map(Activity::getEndTime).min(comparator);
             this.finishedTime = newFinishedTime.get();
             optimalSolution.add(activities.stream().filter(activity -> activity.getEndTime().equals(finishedTime)).findFirst().orElse(null));
@@ -122,19 +119,9 @@ public class ActivitySelection {
     }
 
     public static void main(String[] args) {
-        List<Activity> activities = new ArrayList<>();
-        activities.add(new Activity(1, 4));
-        activities.add(new Activity(3, 5));
-        activities.add(new Activity(0, 6));
-        activities.add(new Activity(5, 7));
-        activities.add(new Activity(3, 9));
-        activities.add(new Activity(5, 9));
-        activities.add(new Activity(6, 10));
-        activities.add(new Activity(8, 11));
-        activities.add(new Activity(8, 12));
-        activities.add(new Activity(2, 14));
-        activities.add(new Activity(12, 16));
-        activities.add(new Activity(16, 18));
+        List<Activity> activities = Arrays.asList(new Activity(1, 4), new Activity(3, 5), new Activity(0, 6), new Activity(5, 7),
+                new Activity(3, 9), new Activity(5, 9), new Activity(6, 10), new Activity(8, 11),
+                new Activity(8, 12), new Activity(2, 14), new Activity(12, 16), new Activity(16, 18));
         ActivitySelection activitySelection = new ActivitySelection(activities);
         activitySelection.getOptimalSolutionSizeIteration();
         System.out.println(activitySelection.optimalSolutionSize);
