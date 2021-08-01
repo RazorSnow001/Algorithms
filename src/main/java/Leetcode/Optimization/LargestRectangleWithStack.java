@@ -13,7 +13,7 @@ public class LargestRectangleWithStack {
         int maxArea = 0;
         int traverseIndex = 1;
         int[] recordMaxInfo = new int[4];
-        /* because in the traverse process the index behavior is not consistent . maybe in one step it
+        /** because in the traverse process the index behavior is not consistent . maybe in one step it
             more forward or stay . so we need use the while rather than the for loop
             and how about the = relationship ? we computing the algorithm in our mind
             and find yes that is a great way to ignore the border or small equal condition
