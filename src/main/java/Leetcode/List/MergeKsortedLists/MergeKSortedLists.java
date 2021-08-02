@@ -1,4 +1,4 @@
-package Leetcode.List;
+package Leetcode.List.MergeKsortedLists;
 
 /*
  * that is the very interesting problem . which describe the
