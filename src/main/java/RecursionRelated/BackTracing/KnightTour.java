@@ -4,7 +4,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-/*1 what is the constraint of the problem ?
+/*
+ *   1 what is the constraint of the problem ?
  *   ok the constraint is the
  *       1  the movement of the knight
  *       2  the boundary condition which also limit the knight movements
