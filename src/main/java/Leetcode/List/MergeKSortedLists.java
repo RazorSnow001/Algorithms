@@ -47,8 +47,5 @@ public class MergeKSortedLists {
         MergeKSortedLists merge = new MergeKSortedLists(input);
         merge.getSortedMergedList();
         System.out.println(merge.result);
-
     }
-
-
 }
