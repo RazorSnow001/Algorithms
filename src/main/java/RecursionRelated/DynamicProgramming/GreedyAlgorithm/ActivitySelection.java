@@ -121,7 +121,7 @@ public class ActivitySelection {
     public static void main(String[] args) {
         List<Activity> activities = Arrays.asList(new Activity(1, 4), new Activity(3, 5), new Activity(0, 6), new Activity(5, 7),
                 new Activity(3, 9), new Activity(5, 9), new Activity(6, 10), new Activity(8, 11),
-                new Activity(8, 12), new Activity(2, 14), new Activity(12, 16), new Activity(16, 18));
+                new Activity(8, 12), new Activity(2, 14), new Activity(12, 16), new Activity(16, 17),new Activity(17,18));
         ActivitySelection activitySelection = new ActivitySelection(activities);
         activitySelection.getOptimalSolutionSizeIteration();
         System.out.println(activitySelection.optimalSolutionSize);
