@@ -19,7 +19,6 @@ public class TheMaximumSubarrayProblem {
         int[] leftSolution = getMax(low, mid);
         int[] rightSolution = getMax(mid + 1, high);
         int[] crossMidSolution = linearCrossMid(mid, low, high);
-
         int leftResult = leftSolution[2];
         int rightResult = rightSolution[2];
         int crossMidResult = crossMidSolution[2];
@@ -54,7 +53,6 @@ public class TheMaximumSubarrayProblem {
             }
             leftIndex--;
         }
-
         while (rightIndex != high + 1) {
             rightSum = rightSum + inputArray[rightIndex];
             if (rightSum >= rightMax) {
@@ -63,7 +61,6 @@ public class TheMaximumSubarrayProblem {
             }
             rightIndex++;
         }
-
         int maxSum = 0;
         for (int i = resultLeftIndex; i <= resultRightIndex; i++) {
             maxSum = maxSum + inputArray[i];
