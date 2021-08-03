@@ -1,6 +1,7 @@
 package RecursionRelated.DivideAndConquer;
 
 /** that is actually
+ *
  *  a very interesting divide and conquer problem
  *  with math the matrix multiplication
  *  so the abstraction matrix multiplication
@@ -24,6 +25,7 @@ package RecursionRelated.DivideAndConquer;
  * 9 C22 D SQUARE-MATRIX-MULTIPLY-RECURSIVE.A21  B12/
  * C SQUARE-MATRIX-MULTIPLY-RECURSIVE.A22; B22/
  * 10 return C
+ *
  *  */
 public class MatrixMultiplication {
 
