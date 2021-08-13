@@ -1,0 +1,52 @@
+But although graphs are used extensively during the software development process, developers tend to forget about graphs when it comes to data persistence. We try
+to fit the data into relational tables and columns, and to normalize and renormalize
+its structure until it looks completely different from what it’s trying to represent.
+
+An access control list is one example. This is a problem solved over and over
+again in many enterprise applications. You’d typically have tables for users, roles, and
+resources. Then you’d have many-to-many tables to map users to roles, and roles
+to resources. In the end, you’d have at least five relational tables to represent a rather
+simple data structure, which is actually a graph. Then you’d use an object-relational
+mapping (ORM) tool to map this data to your object model, which is also a graph.
+
+Wouldn’t it be nice if you could represent the data in its natural form, making
+mappings more intuitive, and skipping the repeated process of “translating” the data
+to and from a storage engine? Thanks to graph databases, you can. Graph databases
+use the graph model to store data as a graph, with a structure consisting of vertices and
+edges, the two entities used to model any graph.
+
+In addition, you can use all the algorithms from the long history of graph theory
+to solve graph problems more efficiently and in less time than using relational database queries.
+
+Once you’ve read this book, you’ll be familiar with Neo4j, one of the most prominent graph databases available.
+You’ll learn how a Neo4j graph database helps you
+model and solve graph problems in a better-performing and more elegant way, even
+when working with large data sets
+
+Why would you use a graph database, or more specifically Neo4j, as your database of
+choice? As mentioned earlier, it’s often quite natural for people to logically try to
+model, or describe, their particular problem domain using graph-like structures and
+concepts, even though they may not use a graph database as their ultimate data store.
+Choosing the right data store (or data stores—plural, in today’s polyglot persistence
+world) to house your data can make your application soar like an eagle; it can come
+crashing to the ground just as easily if the wrong choice is made.
+ A good way to answer this question, then, is to take a problem that naturally fits
+very well into the graph-based world and compare how a solution using Neo4j fares
+against one using a different data store. For comparison purposes, we’ll use a traditional relational database, as this is generally the lowest common denominator for
+most people when it comes to understanding data storage options. More importantly, it’s what most people have turned to—and sometimes still turn to—to model
+such problems.
+
+The example we’re going to explore is a social network—a set of users who can be
+friends with each other
+
+NOTE To be semantically correct, the friendship relationship should be bidirectional. In Neo4j, bidirectionality is modeled using two relationships, with
+one direction each. (In Neo4j, each relationship must have a well-defined
+direction, but more on that later.) So you should see two separate friendship
+relationships for each pair of friends, one in each direction. For simplicity we
+have modeled friendships as single, direct relationships. In chapters 2 and 3
+you’ll learn why this data model is actually more efficient in Neo4j.
+
+There’s nothing unusual about this approach, but there’s one potential problem:
+although you’re only interested in friends of friends of a single user, you have to perform a join of all data in the t_user_friend table, and then discard all rows that you’re
+not interested in
+
