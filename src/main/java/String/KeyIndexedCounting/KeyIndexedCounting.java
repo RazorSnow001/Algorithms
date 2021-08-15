@@ -60,12 +60,12 @@ public class KeyIndexedCounting {
 
     public static void main(String[] args) {
         List<Person> personList = Arrays.asList(new Person("TOM", 2), new Person("LUCY", 2),
-                new Person("JOSH", 1), new Person("BOSH", 3));
+                new Person("JOSH", 1), new Person("BOSH", 3),new Person("CURRY",1),new Person("CURRY",2));
         KeyIndexedCounting sortByGroupId = new KeyIndexedCounting();
         List<Person> sortedPersonList = sortByGroupId.sortByGroupId(personList);
+        Comparator<Person> personComparator = Comparator.comparingInt(Person::getGroup);
+        personList.stream().sorted(personComparator).forEach(p -> System.out.println(p.getName() + "..." + p.getGroup()));
+        System.out.println();
         sortedPersonList.forEach(p -> System.out.println(p.getName() + "..." + p.getGroup()));
-
     }
-
-
 }
