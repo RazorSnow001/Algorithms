@@ -1,0 +1,43 @@
+This chapter follows a four-step process to graph data modeling. First, we’ll start by
+defining the problem to ensure we understand the details and requirements. Then we’ll
+move on to creating a conceptual data model (a whiteboard model) of our problem
+from a business point of view, expressing the entities and relationships between these.
+Third, we’ll translate this conceptual data model to a logical data model consisting of
+vertices, edges, and properties to express the developer’s view of the entities and relationships between those. Finally, we’ll test our logical data model against our business
+understanding to ensure that our model is capable of satisfying all the requirements of
+the problem we need to solve. We’ll then conclude the chapter by building a graph data
+model for the social network use case, DiningByFriends, to learn by doing.
+
+Data modeling is the process of translating real-world entities and relationships into
+equivalent software representations. The extent to which we achieve accurate software representations of these real-world items dictates how well we address the
+intended problem
+
+In relational database applications, the process of data modeling is about translating certain real-world problems, understandings, and questions into software, usually
+focusing on creating a technical implementation involving a database. This includes
+identifying and understanding the problem, determining the entities and relationships in that problem, and then creating a representation of that problem in the database. The graph data modeling process is largely the same. The main difference is
+that we must shift from an “entity first” mindset (or perhaps more accurately, an
+“entity-only” mindset) to an “entity and relationship” mindset.
+
+*Entity—Commonly represented by nouns, entities describe the things or the
+*type of things in the domain (for example, vehicles, users, or geographic locations). As we move from problem definition and conceptual modeling, entities
+*often become vertices in the logical model and technical implementation.
+
+* Relationship—Often represented by verbs (or verbal phrases), relationships
+*describe how entities interact with one another. It could be something like
+*moves as in “a vehicle moves to a location,” or friends as in the Facebook sense of
+*this word as a verb (for example, “a person friends another person”). As we
+*move from problem definition and conceptual modeling, relationships often
+*become edges in the logical model and technical implementation.
+
+* Attribute—Like entities, also represented by a noun, but always in the context of
+*an entity or relationship. Attributes describe a quality about the entity or relationship. We limit our use of attributes as we feel that these can distract from
+*the more critical parts of the model development process.
+
+* Access pattern—Describes either questions or methods of interaction in the
+*domain. Examples can be questions like, Where is this vehicle going? or Who
+*are this person’s friends? As we move from problem definition and conceptual
+*modeling, access patterns often become queries in the logical model and technical implementation
+
+But these are not the same things. Though there is often a strong correlation
+between the conceptual model described with entities and relationships and the logical model described with vertices and edges, these are not guaranteed to have a oneto-one correlation. To take an example, it is perfectly normal to have an entity in the
+conceptual model implemented as a property on a vertex in the logical model.
