@@ -1,15 +1,24 @@
 package Leetcode.StringNumTransform;
 
-/* why we need to think the problem in a very complete way ?
-*  we can just write the original  prototype  . yes
-* just 1 - 20
-*  that is simple . and we see some thing that is really similar
-*  17 - 10+5+2 17/10 = 1 17%10=7
-*  and 7/5=1 7%5=2
-*  and 2/1 = 2
-*  17  =  */
+/*
+*  now we have some consideration . so  that is exactly a number execution problem
+*  that is easy to solve with the while loop to / and %
+*  that is really great !
+*  that is really great !
+*  so we get a number
+*  we get a list with this you know
+*  the list contains the key and value
+*  so that is a list of
+*  pairs
+*  so we need to implement a pair ?
+*
+*
+*
+* */
 public class IntegerToRoman {
+    public static void main(String[] args) {
 
+    }
 
 
 }
