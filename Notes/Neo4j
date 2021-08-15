@@ -50,3 +50,10 @@ There’s nothing unusual about this approach, but there’s one potential probl
 although you’re only interested in friends of friends of a single user, you have to perform a join of all data in the t_user_friend table, and then discard all rows that you’re
 not interested in
 
+While a large number of joins in a SQL query can indicate that a graph database
+might be a good fit, it doesn’t make that possibility certain. Large numbers of joins in
+a SQL query are often a sign of a well-normalized data model. But when those joins
+are not being used to retrieve reference data (as is done with a third normal form in a
+relational database) and, instead, are used to link items together (as with a parentchild relationship), then we may want to consider a graph database. Also, recursive
+query patterns benefit from graph databases when we do not know the number of
+joins that will be performed.
