@@ -1,4 +1,4 @@
-package KMP;
+package String.KMP;
 
 import java.util.ArrayList;
 import java.util.List;
