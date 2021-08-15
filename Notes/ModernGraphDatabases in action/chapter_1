@@ -1,0 +1,52 @@
+Modern applications are built on data—data that is ever increasing in both size and
+complexity. Even as the complexity of our data grows, so do our expectations of
+what insight our applications can derive from that data. If you are old enough, you
+likely remember when applications took a long time to load data and had limited
+features.
+
+This puts us at a crossroad: we can use the relational database
+“hammer” to pound away at those questions and make this work well enough, or we
+can take a step back and look at what other tools can answer these questions better,
+faster, and with less effort
+
+By reading this book, you decided to take a step back from your relational database
+hammer and investigate a road less traveled: graph databases. This book is written for
+developers, engineers, and architects who are interested in other ways to solve problems specific to working with highly connected data.
+
+We assume you are already familiar with relational databases but are interested in learning when, where, and how
+graph databases are a better tool.
+
+ Our primary approach is through an example of building a fictitious restaurant
+review and recommendation application we call “DiningByFriends.” As we move
+through the software development life cycle from planning, to analysis, to design,
+and on to implementation, this application demonstrates how to think about and
+work with graph data. Each chapter builds on the previous chapter, and by the end of
+this book, we’ll have created a functioning application on a graph database. We
+believe that putting the concepts immediately to work by solving a realistic set of
+problems, even if they are somewhat simplistic, is the best way to get comfortable
+using a new technology. Let’s begin our journey with an introduction to what graphs
+and graph databases are and how they compare with traditional tools such as relational databases.
+
+so the relational database and the graph database is not enemy for each other
+the data is the key of the problem
+even 100 problems and relational can give great solution 88 of the 100
+
+here are still 12 reminding problem which in deed
+we can use the relational database but not good enough !
+
+Figure 1.1 shows a graph where the key items and relationships are represented by
+abstractions. First, we abstracted key locations, like intersections, and represented
+these as circles. We then designated the connections between these key intersections
+as lines, showing how the key intersections are related. This is just one example of how
+we naturally represent real-world problems as graphs.
+
+Unlike other database technologies, graph databases are built on the concept that
+the relationships between entities are as or more important than the entities within
+the data. Because entities and relationships are treated with equal importance in a
+graph database, we can represent and reason over real-world relationships more
+accurately and easily, especially when compared to other database technologies.
+
+As
+we’ll show in this book, graph databases are better tools for both representing the
+rich and varied relationships between things, and recognizing patterns based on
+these relationships.
