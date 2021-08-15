@@ -54,7 +54,7 @@ While a large number of joins in a SQL query can indicate that a graph database
 might be a good fit, it doesn’t make that possibility certain. Large numbers of joins in
 a SQL query are often a sign of a well-normalized data model. But when those joins
 are not being used to retrieve reference data (as is done with a third normal form in a
-relational database) and, instead, are used to link items together (as with a parentchild relationship), then we may want to consider a graph database. Also, recursive
+relational database) and, instead, are used to link items together (as with a parent child relationship), then we may want to consider a graph database. Also, recursive
 query patterns benefit from graph databases when we do not know the number of
 joins that will be performed.
 
@@ -64,3 +64,33 @@ query in a relational database requires an unknown number of joins,and it might 
 However, graph databases
 can recurse efficiently over unbounded hierarchical data such as this. If a recursive
 approach helps to solve the problem, then a graph database is often preferable
+
+!We won’t go so far as to call graph databases schemaless, a term indicating that the database engine does not enforce schema on write operations; we know several graph
+!databases that do enforce schema. But we can say that you can design graph databases
+!to be more tolerant of evolving data. Relational databases, on the other hand, have a
+!well-deserved reputation for the strictness of their schema and the complexity associated when making schema changes.
+
+?If your problem requires taking in data with different data schemas, such as dependency management, then a graph database may be worth investigating. Flexibility with
+?data schema alone should not be a sufficient reason to choose a graph database, however, but combined with other features, it might be enough to tip the scales in favor of
+?using a graph database.
+
+*If you’re doin something such as routing, dependency management, social network
+* analysis, or cluster analysis, then your problem revolves around highly interconnected
+* data, so your domain may be well suited for using a graph. A word of caution: although
+* your domain models naturally in a graph, if your questions aren’t relying on the relationships in the graph for the answers, then you should consider other options.
+
+The five general types of databases are key-value, wide column, document, relational, and graph. Of these five, only relational and graph databases are able to
+model relationships with any level of sophistication.
+
+Graph databases are designed with relationships as first-class citizens, making it
+easier to build software that relies on working with these relationships. When
+answering questions that heavily rely on the relationships between data, graph
+databases tend to perform better compared to other types of databases
+
+Use cases that require features like recursive queries, returning different result
+types, or returning paths between things, are easier to code and are better performing in graph databases.
+
+Due to the power and flexibility of graph databases, a large variety of good and
+bad graph use cases are cited on the internet. The most important factor in
+deciding if a use case is good or bad is the knowledge of the desired questions
+and outcomes from whatever system you choose.
