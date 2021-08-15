@@ -94,3 +94,18 @@ Due to the power and flexibility of graph databases, a large variety of good and
 bad graph use cases are cited on the internet. The most important factor in
 deciding if a use case is good or bad is the knowledge of the desired questions
 and outcomes from whatever system you choose.
+
+Let’s say you want to build a fire pit in your backyard. How would you approach this
+problem? Would you just start building something and hope that it comes out all
+right, or would you sit back and draw a picture of what you want to accomplish?
+When building anything, be it software or a backyard fire pit, it’s crucial that you
+start with a good mental picture of the end result. This picture needs to include the
+scope that the solution addresses and the requirements to complete the solution.
+The more details this picture provides, the easier it is to build the solution.
+
+In software, a significant part of the mental picture is the data model. A well-thoughtout data model with a helpful level of abstraction and consistent naming conventions is
+intuitive to work with, maybe even a joy to use. This is as true with graph databases as it is
+with any other type of database. But graphs add a twist—modeling relationships with
+greater sophistication. And therein lies our challenge: we need to create a data model
+that succinctly expresses these relationships, yet with a high level of detail
+
