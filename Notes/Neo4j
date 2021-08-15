@@ -57,3 +57,10 @@ are not being used to retrieve reference data (as is done with a third normal fo
 relational database) and, instead, are used to link items together (as with a parentchild relationship), then we may want to consider a graph database. Also, recursive
 query patterns benefit from graph databases when we do not know the number of
 joins that will be performed.
+
+Taking our friends-of-friends example, let’s say that we want to answer the question, “What are the connections to get from Bob to Ted?” Attempting to perform this
+query in a relational database requires an unknown number of joins,and it might not complete, indicating that no path exists between the two.
+
+However, graph databases
+can recurse efficiently over unbounded hierarchical data such as this. If a recursive
+approach helps to solve the problem, then a graph database is often preferable
