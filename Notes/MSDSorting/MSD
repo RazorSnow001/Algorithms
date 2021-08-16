@@ -1,0 +1,75 @@
+MSD string sort To implement a general-purpose string sort, where
+strings are not necessarily all the same length, we consider the characters
+in left-to-right order
+
+We know that strings that start with a should appear
+before strings that start with b, and so forth.
+
+The natural way to implement
+this idea is a recursive method known as most-significant-digit-first (MSD)
+string sort.
+
+We use key-indexed counting to sort the strings according to
+their first character, then (recursively) sort the sub arrays corresponding to
+each character (excluding the first character, which we know to be the same
+for each string in each subarray). Like quicksort, MSD string sort partitions the array into sub arrays that can be sorted independently to complete
+the job, but it partitions the array into one subarray for each possible value
+of the first character, instead of the two or three partitions in quicksort.
+
+We need to pay particular attention to reaching the ends of strings in MSD string sort
+
+we know this algorithm is
+you know
+the length of the string is different
+that is a more general case we encounter often
+but the problem is how we know the string in end and we how to handle it in a consistent way.
+
+！which means after one loop key indexed sort
+!we have sorted the elements  and if you do the same operation like LSD will disturb our initial work
+!so like group operation
+!we need to group according to the previous loop results .
+!that is a solution !
+
+ok  so how to do that ??
+that is really difficult to solve but !
+
+so how about that
+
+we use the immediately key indexed sort to do the immediately sort
+but .
+
+the further sort is not sure for right now
+because of the length and character of the elements
+
+so use the divide and conquer problem . why we use this algorithm .
+because we find similar problem and we also abstract the part is hard to solve right now .
+we actually abstract a lot of further sorting process .
+so we have built the solution
+in the current stage we do the immediately key indexed sort
+and we abstract the further .
+
+but what is the core for the next group operation . I mean . that is the previous counting
+and the base condition is . 1 a b same size and do the key indexed sort
+                            2 end of the string out of the next group
+                            3 the group size is one
+
+                            so
+
+ the code
+ will like that !
+
+ f(list,range,charAt) the range will constrain the group
+
+
+for example
+
+input
+
+1abs
+1abs
+
+2abc
+2cba
+
+3 8 11 15
+0-2 3-7 8-10 11-14
