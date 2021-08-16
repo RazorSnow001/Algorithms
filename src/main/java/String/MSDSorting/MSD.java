@@ -3,7 +3,6 @@ package String.MSDSorting;
 import java.util.Arrays;
 public class MSD {
     public void sortByMSD(String[] input, int begin, int end, int position) {
-
         if (begin == end) {
             return;
         }
