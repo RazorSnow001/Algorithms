@@ -37,8 +37,8 @@ public class LSD {
         for (int i = lengthOfElement - 1; i >= 0; i--) {
             int[] record = new int[R + 1];
             String[] executionArray = new String[inputStringArray.length];
-            for (int j = 0; j < inputStringArray.length; j++) {
-                record[inputStringArray[j].charAt(i) + 1]++;
+            for (String s : inputStringArray) {
+                record[s.charAt(i) + 1]++;
             }
             for (int k = 0; k < record.length - 1; k++) {
                 record[k + 1] = record[k] + record[k + 1];
@@ -48,9 +48,7 @@ public class LSD {
                 int resultIndex = record[str.charAt(i)];
                 executionArray[resultIndex-1] = str;
             }
-            for (int j = 0; j < inputStringArray.length; j++) {
-                inputStringArray[j] = executionArray[j];
-            }
+            System.arraycopy(executionArray, 0, inputStringArray, 0, inputStringArray.length);
         }
     }
 
