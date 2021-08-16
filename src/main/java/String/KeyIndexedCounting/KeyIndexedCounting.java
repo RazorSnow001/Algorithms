@@ -30,6 +30,14 @@ import java.util.*;
     but it uses the relationship between the first index of each group and the group numbers and orders
     so that is a very elegant solution .
 */
+
+/*
+* Immediate from the code. Initializing the arrays uses N  R  1 array accesses.
+* The first loop increments a counter for each of the N items (3N array accesses); the second loop does R additions (3R array accesses); the third loop does
+* N counter increments and Ndata moves (5N array accesses); and the fourth loop
+* does N data moves (2N array accesses). Both moves preserve the relative order of
+* equal keys.
+* */
 public class KeyIndexedCounting {
     public List<Person> sortByGroupId(List<Person> personList) {
         Optional<Integer> result = personList.stream().map(Person::getGroup).max(Comparator.comparingInt(a -> a));

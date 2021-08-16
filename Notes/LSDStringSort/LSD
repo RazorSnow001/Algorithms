@@ -1,0 +1,23 @@
+oh my god
+that is actually a
+repeat usage of the
+key indexed counting sort
+
+so
+
+the output is really interesting
+
+from the left to the right
+
+we want the sort for the elements will satisfy following  constraints :
+   1 smaller ------------ front
+   2 but we need to guaranteed the left elements satisfy the order first .
+
+proposition b. LSD string sort stably sorts fixed-length strings.
+proof: This fact depends crucially on the key-indexed counting implementation
+being stable, as indicated in Proposition A. After sorting keys on their i trailing
+characters (in a stable manner), we know that any two keys appear in proper order
+in the array (considering just those characters) either because the first of their i
+trailing characters is different, in which case the sort on that character puts them
+in order, or because the first of their i trailing characters is the same, in which case
+they are in order because of stability (and by induction, for i-1).
