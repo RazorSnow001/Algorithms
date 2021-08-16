@@ -39,5 +39,4 @@ public class MSD {
         msd.sortByMSD(input,0,6,0);
         Arrays.stream(input).forEach(System.out::println);
     }
-
 }
