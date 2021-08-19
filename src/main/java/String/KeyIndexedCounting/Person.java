@@ -19,5 +19,4 @@ public class Person {
         this.group = group;
     }
 
-
 }
