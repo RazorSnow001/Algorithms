@@ -1,0 +1,66 @@
+Multithreaded Algorithms
+
+The vast majority of algorithms in this book are serial algorithms suitable for
+running on a uni processor computer in which only one instruction executes at a
+time.
+
+In this chapter, we shall extend our algorithmic model to encompass parallel
+algorithms, which can run on a multiprocessor computer that permits multiple
+instructions to execute concurrently
+
+dynamic multithreaded algorithms
+
+The first lecture teaches the basics behind
+multithreading, including defining the measures of work and critical-path length
+
+critical path length !
+what is that ?
+
+greedy scheduling theorem
+
+The second lecture shows
+how parallel applications, including matrix multiplication and sorting, can be analyzed using
+divide-and-conquer recurrences
+
+matrix multiplication
+
+sort !
+
+Multithreaded programming is a programming paradigm in which a single program
+is broken into multiple threads of control which interact to solve a single problem
+
+where threads can
+be created and destroyed as easily as an ordinary subroutine can be called and return.
+
+The keyword spawn before the
+subroutine call in line 3 indicates that the subprocedure FIB(n − 1) can execute in parallel with
+the procedure FIB(n) itself
+
+that is very great !
+that is very great !
+
+Unlike an ordinary function call, however, where the parent is not
+resumed until after its child returns  in the case of a spawn, the parent can continue to execute in
+parallel with the child
+
+In this case, the parent goes on to spawn FIB(n − 2). In general, the parent
+can continue to spawn off children, producing a high degree of parallelism.
+
+so
+the spawn of the program means we can
+the parent nodes needn't  to wait its child nodes return .
+but eventually we need the result !
+but as the very early stage . we can let the bullet fly for a while
+!
+don't wait it and just move on to the next line
+that is quick
+asyn style !
+quite interesting my bro !
+
+A procedure cannot safely use the return values of the children it has spawned until it executes
+a sync statement.
+
+If any of its children have not completed when it executes a sync, the procedure
+suspends and does not resume until all of its children have completed
+
+

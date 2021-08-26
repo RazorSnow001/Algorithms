@@ -55,10 +55,10 @@ and the base condition is . 1 a b same size and do the key indexed sort
 
                             so
 
- the code
- will like that !
+the code
+will like that !
 
- f(list,range,charAt) the range will constrain the group
+f(list,range,charAt) the range will constrain the group
 
 
 for example

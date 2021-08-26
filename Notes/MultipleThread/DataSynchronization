@@ -1,0 +1,7 @@
+the threads that we examined were more or less independent: they did not need to share
+data between them
+
+so the thread
+
+Data Synchronization
+
