@@ -63,4 +63,53 @@ a sync statement.
 If any of its children have not completed when it executes a sync, the procedure
 suspends and does not resume until all of its children have completed
 
+but the syn is as important as the asyn
+without the syn we can't get the desired result !
 
+so we have to wait for the corresponding sub problem finish their task !
+waiting for the sub problem finish ! !
+
+-------------------------------------         ------
+         -------------------------------------
+         -------------------------------------
+
+----------------------------------------- ---------------------------------------- ---------------------------------------- ------
+
+the overall execution time is less !
+
+but we also need to consider the cost of creating the new thread !  and even close  them .
+
+so the main the parent node touch the sync statement and check whether the sub node have return ?
+yes both
+we return the results !
+
+
+In the Fibonacci example, the sync statement in line 5 is required before the return statement
+in line 6 to avoid the anomaly that would occur if x and y were summed before each had been
+computed
+
+The spawn and sync keywords specify logical parallelism, not “actual” parallelism
+
+these keywords indicate which code may possibly execute in parallel, but what actually runs in
+parallel is determined by a scheduler
+
+which maps the dynamically unfolding computation onto
+the available processors.
+
+e can view a multithreaded computation in graph-theoretic terms as a dynamically unfolding
+dag G = (V, E)
+
+We define a thread to be a maximal sequence
+of instructions not containing the parallel control statements spawn , sync, and return
+
+Threads
+make up the set V of vertices of the multithreaded computation dag G.
+
+Each procedure execution is
+a linear chain of threads, each of which is connected to its successor in the chain by a continuation
+edge.
+
+
+the critical path of the graph is 8 we find that is the longest path of the the execution .
+
+so we need to learn how to analyze the master theory to handle the recursion
