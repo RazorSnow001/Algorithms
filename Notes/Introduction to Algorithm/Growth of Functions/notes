@@ -1,0 +1,11 @@
+Intuitively, the lower-order terms of an asymptotically positive function can be
+ignored in determining asymptotically tight bounds because they are insignificant
+for large n.
+
+When n is large, even a tiny fraction of the highest-order term suffices to dominate the lower-order terms.
+
+ asymptotically bounds a function from above and below
+
+ When
+ we have only an asymptotic upper bound,  big O
+
