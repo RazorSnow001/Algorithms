@@ -1,0 +1,27 @@
+here is a big problem
+why we can't find the thoughts for solving the problem with the divide and conquer algorithm ?
+what's wrong with us ?
+
+we should be very careful for some of the characters which the problem may indicates the
+method will be  the divide and conquer !
+
+1 the input is a list
+2 and the output will like the
+  merge sort  or quick sort
+  or find the max subArray
+  or find the common prefix of the
+  string list
+  we want  to handle the relationship
+  between these elements
+
+  the sorting !
+  the max subArray
+  the common prefix absolutely
+  all these problem describe the relationship between the elements
+  the sorting is about the relationship of the number
+
+  so that is why we can use the fork join pool to handle the list problem
+  which indeed implements the divide and conquer algorithm
+  and the dynamic multi thread algorithm
+  which just use the multiple thread to handle the problem . but it is a little different !
+
