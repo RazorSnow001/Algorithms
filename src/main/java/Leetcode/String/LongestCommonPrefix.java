@@ -4,8 +4,6 @@ package Leetcode.String;
 import java.util.Arrays;
 import java.util.List;
 
-import static scala.tools.nsc.interpreter.session.NoHistory.index;
-
 /*
 *  here we go . we have 3 approaches to solve this problem
 *  which indicates
