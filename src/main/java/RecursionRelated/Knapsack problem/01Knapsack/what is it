@@ -1,0 +1,65 @@
+0-1 Knapsack Problem | DP-10
+
+we have n items to choose
+and each have the attribute
+value and weight
+we also have a bag to pick the items
+so in the constraint of the weight
+we want to get the max value of the picked items !
+
+so how to do that ?
+
+search problem ! ?
+
+that is easy one
+!
+
+suppose we get the solution set
+use the mathematical mind to think the programming related problem
+that is cool and very efficient
+
+so ?
+
+so what we have ?
+
+when you try to solve the 0 1 knapsack problem
+
+1 use our precious weapons --- the solution set to help us to reverse analysis the result
+
+  so if we suppose that we have the solution [a2,a4,a5,a7,a8] that is the solution
+  we can think that  the solution set with the changeable size
+  that is ok
+  but
+  how to find a solution
+
+  the most brute way is to find all the combination
+
+  and use the weight constraint to reduce the scale of the problem
+  but that is worse !
+  so we can use the back trace to do the improvement !
+  just use the depth first search
+  but here we have another problem
+  some repetition of the results
+  for example
+
+  a1 a5 a7 is same result of teh a7 a1 a5
+  ok  ?
+  so do we can use a better solution ?
+  use the dp even the greedy !
+
+2 we can use the dp to solve that
+  1 optimal structure -- anti confirmation !if it is not the biggest . then we can find another is bigger that conflicts the condition the current result is the biggest !
+     so the current layer max value depends on the sub layer max ! how to demonstrate that ! ?
+     
+  2 overlapping sub problem !
+
+  do the dp is exactly you know . in some cases is in the recursion set !
+  so we use the demonstration . we need to consider the condition is in the current layer . abstraction mind !
+
+  so that is ok
+
+  and we actually have the knapsack problem with the .... greedy method to solve that !
+
+  why greedy
+
+  you need to demonstrate the greedy selection of the current stage is the element of the optimal solution set !
