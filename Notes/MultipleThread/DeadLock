@@ -1,0 +1,29 @@
+Mutual exclusion
+
+In computer science, mutual exclusion is a property of concurrency control, which is instituted for the purpose of preventing race conditions.
+
+It is the requirement that one thread of execution never enters a critical section while a concurrent thread of execution is already accessing critical section
+
+which refers to an interval of time during which a thread of execution accesses a shared resource, such as [Shared data objects, shared resources, shared memory].
+
+The shared resource is a data object, which two or more concurrent threads are trying to modify
+(where two concurrent read operations are permitted but, no two concurrent write operations or one read and one write are permitted, since it leads to data inconsistency).
+
+Mutual exclusion algorithm ensures that if a process is already performing write operation on a data object [critical section]
+no other process/thread is allowed to access/modify the same object until the first process has finished writing upon the data object [critical section]
+and released the object for other processes to read and write upon
+
+
+It must implement mutual exclusion: only one process can be in the critical section at a time.
+
+It must be free of deadlocks: if processes are trying to enter the critical section,
+one of them must eventually be able to do so successfully, provided no process stays in the critical section permanently.
+
+Non-Critical Section
+Operation is outside the critical section; the process is not using or requesting the shared resource.
+Trying
+The process attempts to enter the critical section.
+Critical Section
+The process is allowed to access the shared resource in this section.
+Exit
+The process leaves the critical section and makes the shared resource available to other processes.
