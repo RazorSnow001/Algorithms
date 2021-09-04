@@ -28,6 +28,10 @@ public class CombinationSumIII {
             return;
         }
 
+        if(target<0){
+            return;
+        }
+
         if (number == 0 && target != 0) {
             return;
         }
