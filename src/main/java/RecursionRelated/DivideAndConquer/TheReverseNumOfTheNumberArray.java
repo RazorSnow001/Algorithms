@@ -1,6 +1,7 @@
 package RecursionRelated.DivideAndConquer;
 
 import java.util.Arrays;
+
 /*
  *  this algorithm use the character of the  merge sort witch
  *  have two already sorted sub array .
@@ -83,7 +84,7 @@ public class TheReverseNumOfTheNumberArray {
     }
 
     public static void main(String[] args) {
-        int[] input = {4, 4, 3, 2, 1, 0};
+        int[] input = {4, 1, 1, 1, 0};
         TheReverseNumOfTheNumberArray execution = new TheReverseNumOfTheNumberArray();
         int result = execution.getReverseNum(input, 0, input.length - 1);
         System.out.println(result);
