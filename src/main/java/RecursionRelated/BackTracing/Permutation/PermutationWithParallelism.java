@@ -5,9 +5,11 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.concurrent.RecursiveTask;
 
-/* ok the permutation is just the usage of the DFS
+/*
+ * ok the permutation is just the usage of the DFS
  *  and the basic mathematical modeling for the back trace
- *  for example 1 2 3 as the input and find the permutation ! */
+ *  for example 1 2 3 as the input and find the permutation !
+ *  */
 public class PermutationWithParallelism extends RecursiveTask<List<List<Integer>>> {
     private List<List<Integer>> result;
     private List<Integer> input;
