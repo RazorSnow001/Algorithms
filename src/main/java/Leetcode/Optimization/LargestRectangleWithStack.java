@@ -6,18 +6,19 @@ public class LargestRectangleWithStack {
     public int getMaxRectangle(int[] input) {
         Stack<Integer> stack = new Stack<>();
        /*  why we record the index of input in the stack ?
-            1 we can use the index find the height
-            2 with the index we can find the width */
+        *    1 we can use the index find the height
+        *    2 with the index we can find the width */
         stack.push(-1); // for the consistent coding
         stack.push(0); // for the first column we don't need to compare just push
         int maxArea = 0;
         int traverseIndex = 1;
         int[] recordMaxInfo = new int[4];
-        /** because in the traverse process the index behavior is not consistent . maybe in one step it
-            more forward or stay . so we need use the while rather than the for loop
-            and how about the = relationship ? we computing the algorithm in our mind
-            and find yes that is a great way to ignore the border or small equal condition
-            construct the framework and do the detail work . so that is great ! */
+        /* because in the traverse process the index behavior is not consistent . maybe in one step it
+          *  more forward or stay . so we need use the while rather than the for loop
+          *  and how about the = relationship ? we're computing the algorithm in our mind
+          *  and find yes that is a great way to ignore the border or small equal condition
+          *  construct the framework and do the detail work . so that is great !
+          * */
         while (traverseIndex < input.length) {
             if (stack.peek() == -1) {
                 stack.push(traverseIndex);

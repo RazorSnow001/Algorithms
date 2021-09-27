@@ -9,22 +9,21 @@ import org.junit.Test;
  *    2 as a algorithm we focus on the Input and Output
  *    so we write the  mapping   procedure so that is the key !
  * input : a string with just ( and ) that is great
- * so the output is just the you know ... give the number of the max valid for the parentheses
+ * so the output is just the know ... give the number of the max valid for the parentheses
  * that is the key !
  * so we need to analyze the service and create  the  model for it and we will find the right
  * method and the right data structure ! that is the right algorithm
  * ((())) 6 0 0 0 2 4 6 that is actually a math process
  * so the previous char will influence the future !
- * that may indicates  the DP
+ * that may indicate  the DP
  * so DP is  actually some method
  * that is handle both now and have the future implicitly perspective !  so we get abstraction from the you know very specific case
  * that is the key
  * ()()()()()() 0 2 2 4 4 6 6 8 8 10 ----- 0 2 0 4 0 6 0 8 0 10 find the max of the record array !
  * ()()((()()()())) so we write all the condition for the right way
  * 0 2 0 4 0 0 0 2 0 4 0 6 0 8 10 16
- * nested and single pair
- * so we know the string0 is just the char array . so
- * 1 only when the char is ) we may  do the computing the continuity length of the valid parenthese
+ * nested and single pair, so we know the string0 is just the char array . so
+ * 1 only when the char is ) we may  do the computing the continuity length of the valid parentheses
  *    1  */
 public class LongestValidParentheses {
     public int longestValidParentheses(String input) {

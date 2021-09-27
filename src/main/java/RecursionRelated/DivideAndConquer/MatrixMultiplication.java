@@ -7,7 +7,7 @@ package RecursionRelated.DivideAndConquer;
  *  so the abstraction matrix multiplication
  *  we use it frequently !
  *  so the logic is we do the high level matrix multiplication with the rule
- *  and we don't know the result but we assume we get the result .
+ *  and we don't know the result, but we assume we get the result .
  *
  *
  *  SQUARE-MATRIX-MULTIPLY-RECURSIVE.A B/

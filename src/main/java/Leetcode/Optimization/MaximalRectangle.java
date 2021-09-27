@@ -7,8 +7,7 @@ public class MaximalRectangle {
     /*
      * here we have two methods for solving this problem
      * 1 we can transform this problem into the largestRectangle Problem and use the stack to solve it
-     * 2 we can do the 1 record the width of one line
-     *   and we can focus on the width and search for the up
+     * 2 we can do the 1 record the width of one line, and we can focus on the width and search for the up
      * */
     public int maximalRectangle(int[][] matrix) {
         int[][] recordWidthForRow = new int[matrix.length][matrix[0].length];

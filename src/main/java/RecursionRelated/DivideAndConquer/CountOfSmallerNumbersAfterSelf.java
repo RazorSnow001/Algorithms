@@ -13,8 +13,6 @@ package RecursionRelated.DivideAndConquer;
    *    1 3 7 5
    *    0 0 1 0
    *
-   *
-   *
 * */
 public class CountOfSmallerNumbersAfterSelf {
 

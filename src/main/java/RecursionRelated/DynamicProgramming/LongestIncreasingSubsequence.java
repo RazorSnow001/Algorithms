@@ -1,7 +1,6 @@
 package RecursionRelated.DynamicProgramming;
 
 import java.util.List;
-
 /*
 *  that is really a easy problem for the DP
 *  1 Input: nums = [10,9,2,5,3,7,101,18]
@@ -15,7 +14,7 @@ import java.util.List;
 *      optimal structure ?
 *      does it have the optimal structure ?
 *      yes ! ok
-*      if we have the optimal solution set . ax and so on . we say all the sub sequence of ax is also a
+*      if we have the optimal solution set . ax and so on . we say all the subsequence of ax is also an
 *      optimal solution . we say the solution of the sub array except the current node .
 *    3 how to demonstrate we can use the DP
 *      1 as the 2 we say we should find the ok the optimal structure which means the sub problem solution will
@@ -29,7 +28,25 @@ import java.util.List;
 *      is  ------------ the sub problem solution is optimal for its stage ! great ！ that is the view --- beautiful !
 *    4 back to this specific problem. how to write the code ?
 *      we all know writing codes is about managing the dependency !   ok that is great  so we highly recommend to using the graph to write
-*      actully every code
+*      actually  every single line  code
+*      ok  so what is the problem and what is the sub problem ?
+*      great question . for example . when we start at 10 . we traverse for the element --- number ---- which bigger than the 10
+*      we find 101 . and we should know the answer of the sub problem which start at 101 . ok now we know how to do that !
+*      so this paradigm . for one problem . it is one node . traverse all the number which is bigger than current number -- current node .
+*      and we have confirmed that is a DP problem . which we need to 1 use the solution set to check the potential solution  --- all the
+*      algorithms ---- not all ---- most of that is about the traversing --- enumeration  ! so how to enumerate smart is the most important thing !
+*      how to avoid repetition computing . which indeed increase the speed ! ok
+*      so the very first step is check the solution set .
+*      which will lead to the brute traverse ---- and we can make use of the constraint condition to improve the performance a little .
+*      but now . check if the problem . with its feasible solution to check if it has the optimal solution structure or the
+*      overlapping solution features . which leads to the DP solution .
+*      we can use both the bottom to top or the top to bottom solution. these actually the same solution . we do some improvement over the
+*      recursion solution . recursion !  recursion . why we use the recursion . recursion is about the sub problem but don't guarantee the
+*      overlapping sub problem .
+*      ok !
+*      that is quite great !
+*      so that is the approach for the analysis process .but how to write the code ! ?
+*
 *
 *
 * */

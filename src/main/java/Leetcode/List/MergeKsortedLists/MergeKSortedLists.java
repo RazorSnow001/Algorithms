@@ -9,7 +9,7 @@ package Leetcode.List.MergeKsortedLists;
  * 1 using the divide and conquer to merge two list
  *   which is the result of the further recursion
  * 2 using the traditional index comparison technique to finish the job
- *   which means for each arrays in the list we add the index of the current of the array
+ *   which means for each array in the list we add the index of the current of the array
  *   compare  and get the mini of that . move the index to further execution .
  * 3 ok that is the way !
  *   and here is another way to think about that !

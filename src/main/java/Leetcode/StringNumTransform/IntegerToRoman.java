@@ -9,10 +9,7 @@ package Leetcode.StringNumTransform;
 *  we get a list with this you know
 *  the list contains the key and value
 *  so that is a list of
-*  pairs
-*  so we need to implement a pair ?
-*
-*
+*  pairs, so we need to implement a pair ?
 *
 * */
 public class IntegerToRoman {

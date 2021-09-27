@@ -4,12 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 /*so 1 for this problem ok
- * we want to find  all the you know valid parentheses ok
+ * we want to find  all the know valid parentheses ok
  * so the solution set have multiple solution ((())) that is a solution
  * and ()()() is a solution too
  * so x1 = ( or )
  * x2 = ( or )
- * and so on but we have constraints
+ * and so on, but we have constraints
  * so  the overall number of both ( and ) will be n
  * 2 valid
  *
