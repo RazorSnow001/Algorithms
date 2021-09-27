@@ -4,8 +4,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
-import java.util.stream.Collectors;
-
 /*
  *  that is really a easy problem for the DP
  *  1 Input: nums = [10,9,2,5,3,7,101,18]
