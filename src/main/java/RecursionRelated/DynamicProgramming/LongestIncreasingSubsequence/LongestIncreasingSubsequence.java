@@ -1,4 +1,4 @@
-package RecursionRelated.DynamicProgramming;
+package RecursionRelated.DynamicProgramming.LongestIncreasingSubsequence;
 
 import java.util.ArrayList;
 import java.util.Arrays;
