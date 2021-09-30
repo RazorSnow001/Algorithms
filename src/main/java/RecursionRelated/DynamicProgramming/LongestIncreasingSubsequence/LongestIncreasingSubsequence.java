@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 /*
- *  that is really a easy problem for the DP
+ *  that is really an easy problem for the DP
  *  1 Input: nums = [10,9,2,5,3,7,101,18]
  *    we have a sequence with some numbers , we want to find the
  *    longest increased sequence ! ok so that is a best solution problem .
