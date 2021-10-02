@@ -1,6 +1,7 @@
 package RecursionRelated.DynamicProgramming.LongestIncreasingSubsequence;
 
 import java.util.*;
+
 /*
  *
  * so we have finished the analysis and the easy recursion solution . but we don't use the
@@ -30,13 +31,13 @@ public class DP_Bottom_Top {
             int current = input.get(i);
             List<Integer> currentList = new ArrayList<>();
             currentList.add(current);
-            Map<Integer,List<Integer>> tempMap = new HashMap<>();
+            Map<Integer, List<Integer>> tempMap = new HashMap<>();
             for (int j = i; j < input.size(); j++) {
                 if (current < input.get(j)) {
-                    tempMap.put(j,DPSpace.get(j));
+                    tempMap.put(j, DPSpace.get(j));
                 }
             }
-            if(!tempMap.isEmpty()){
+            if (!tempMap.isEmpty()) {
                 currentList.addAll(Collections.max(tempMap.entrySet(), Comparator.comparingInt(o -> o.getValue().size())).getValue());
             }
             DPSpace.put(i, currentList);
@@ -45,7 +46,7 @@ public class DP_Bottom_Top {
     }
 
     public static void main(String[] args) {
-        List<Integer> input = Arrays.asList(10, 9, 2, 5, 3, 7, 101, 18);
+        List<Integer> input = Arrays.asList(10, 9, 2, 5, 3, 7, 101, 18, 107, 110);
         DP_Bottom_Top test = new DP_Bottom_Top();
         List<Integer> result = test.getLongestIncreasingSubsequence(input);
         System.out.println(result);

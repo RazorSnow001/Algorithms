@@ -79,5 +79,4 @@ public class LongestIncreasingSubsequence {
         List<Integer> longest = longestIncreaseSubsequence.getLongestIncreasingSubsequence(input, 0, 0);
         System.out.println(longest);
     }
-
 }
