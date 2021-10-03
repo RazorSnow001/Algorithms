@@ -64,3 +64,8 @@ when you try to solve the 0 1 knapsack problem
 
   you need to demonstrate the greedy selection of the current stage is the element of the optimal solution set !
 
+
+  Hence, our problem can be abstracted as “choose any number of items from a set,
+  without the chance to take a fraction of any item, such that their total weight won’t be over
+  1000 kgs, and in such a way that the total amount of calories is maximized.”
+
