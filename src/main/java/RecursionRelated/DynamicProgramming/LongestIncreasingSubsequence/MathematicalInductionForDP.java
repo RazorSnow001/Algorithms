@@ -19,7 +19,7 @@ import java.util.Queue;
  *                             2 the number represents the longest end with current number
  *  but with the DP naturally . the bottom to top style . we'd better choose the 2
  *  ok now we write the codes  */
-public class MatheMaticalInductionForDP {
+public class MathematicalInductionForDP {
     public int[] getLongest(int[] nums) {
         int[] records = new int[nums.length];
         Arrays.fill(records, 1);
@@ -54,7 +54,7 @@ public class MatheMaticalInductionForDP {
 
     public static void main(String[] args) {
         int[] input = {10,9,2,5,3,7,101,18};
-        MatheMaticalInductionForDP test = new MatheMaticalInductionForDP();
+        MathematicalInductionForDP test = new MathematicalInductionForDP();
         int[] records = test.getLongest(input);
         System.out.println(Arrays.toString(records));
     }
