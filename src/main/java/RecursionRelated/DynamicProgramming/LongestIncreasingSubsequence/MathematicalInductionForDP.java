@@ -53,7 +53,7 @@ public class MathematicalInductionForDP {
     }
 
     public static void main(String[] args) {
-        int[] input = {10,9,2,5,3,7,101,18};
+        int[] input = {10,9,2,5,3,7,101,18,19,21};
         MathematicalInductionForDP test = new MathematicalInductionForDP();
         int[] records = test.getLongest(input);
         System.out.println(Arrays.toString(records));
