@@ -1,4 +1,4 @@
-package RecursionRelated.DynamicProgramming.LongestIncreasingSubsequence;
+package RecursionRelated.DynamicProgramming.RussianDollEnvelopes.LongestIncreasingSubsequence;
 
 import java.util.Arrays;
 import java.util.Comparator;

@@ -1,4 +1,4 @@
-package RecursionRelated.DynamicProgramming.LongestIncreasingSubsequence;
+package RecursionRelated.DynamicProgramming.RussianDollEnvelopes.LongestIncreasingSubsequence;
 
 public class NumberPair {
     int record;

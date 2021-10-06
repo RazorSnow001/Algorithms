@@ -1,4 +1,4 @@
-package RecursionRelated.DynamicProgramming.LongestIncreasingSubsequence;
+package RecursionRelated.DynamicProgramming.RussianDollEnvelopes.LongestIncreasingSubsequence;
 
 /*
  ! Input: nums = [10,9,2,5,3,7,101,18]
