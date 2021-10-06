@@ -39,7 +39,7 @@ public class LongestValidParentheses {
     }
 
     public static void main(String[] args) {
-        String input =")()())()()((()))";
+        String input =")()())()())((()))";
         LongestValidParentheses test = new LongestValidParentheses();
         System.out.println(test.getLongestIncreasingSubsequence(input));
     }

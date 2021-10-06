@@ -51,5 +51,4 @@ public class DP_Bottom_Top {
         List<Integer> result = test.getLongestIncreasingSubsequence(input);
         System.out.println(result);
     }
-
 }
