@@ -1,4 +1,4 @@
-package RecursionRelated.DynamicProgramming.GreedyAlgorithm;
+package RecursionRelated.DynamicProgramming;
 
 import java.util.Arrays;
 import java.util.Objects;
