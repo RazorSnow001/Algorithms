@@ -12,8 +12,8 @@ import org.junit.Test;
  *  the you know the recursion style program .
  *  and we say this way is DP and we need to set the base condition exactly as the recursion
  *  so in this problem " "  = " "
- *  so we have two string . and the previous recursion program ask if these two string matches ?
- *  so it indicates that from the begin to the end this two string matches !
+ *  so we have to string . and the previous recursion program ask if these two string matches ?
+ *  so it indicates that from the beginning to the end this two string matches !
  *
  * but why we need to use the DP to modify the original recursion ?
  * because of the overlap problem duplicate computing !
