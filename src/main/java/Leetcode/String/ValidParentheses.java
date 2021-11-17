@@ -1,7 +1,5 @@
 package Leetcode.String;
 
-import org.junit.Test;
-
 import java.util.Stack;
 
 public class ValidParentheses {
@@ -27,11 +25,4 @@ public class ValidParentheses {
         return stack.isEmpty();
     }
 
-    @Test
-    public void test() {
-        ValidParentheses validParentheses = new ValidParentheses();
-        String input = "(({}))";
-        boolean result = validParentheses.isValid(input);
-        System.out.println(result);
-    }
 }
