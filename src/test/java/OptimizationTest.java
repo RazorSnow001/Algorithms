@@ -3,24 +3,24 @@ import Leetcode.Optimization.LargestRectangleWithStack;
 import Leetcode.Optimization.MaximalRectangle;
 import Leetcode.Optimization.MaximalRectangleTransform;
 import Util.ArrayCreation;
-import org.testng.annotations.Test;
+
 
 public class OptimizationTest {
-    @Test
+
     public void testLargestRectangle() {
         int[] input = {2, 1, 5, 6, 5, 2, 3, 3, 3};
         LargestRectangleInHistogram search = new LargestRectangleInHistogram();
         search.bruteFindLargest(input);
     }
 
-    @Test
+
     public void testLargestRectangleWithStack() {
         int[] input = {2, 1, 5, 6, 5, 2, 3};
         LargestRectangleWithStack search = new LargestRectangleWithStack();
         System.out.println(search.getMaxRectangle(input));
     }
 
-    @Test
+
     public void testMaxArea() {
         ArrayCreation creation = new ArrayCreation();
         int[][] result = creation.createTwoDimensionalArrayWith01(5, 6);
@@ -30,7 +30,7 @@ public class OptimizationTest {
         System.out.println("max is " + getMax.maximalRectangle(result));
     }
 
-    @Test
+
     public void testMaxRectangleTransform() {
         ArrayCreation creation = new ArrayCreation();
         int[][] result = creation.createTwoDimensionalArrayWith01(10, 10);
@@ -41,7 +41,7 @@ public class OptimizationTest {
         System.out.println(max);
     }
 
-    @Test
+
     public void testStackFindWith0() {
         int[] input = {1, 0, 0, 2, 2};
         LargestRectangleWithStack search = new LargestRectangleWithStack();
@@ -49,7 +49,7 @@ public class OptimizationTest {
         /* and that is very ok ! */
     }
 
-    @Test
+
     public void testTwoDimensionalArray() {
         ArrayCreation creation = new ArrayCreation();
         int[][] result = creation.createTwoDimensionalArrayWith01(5, 5);

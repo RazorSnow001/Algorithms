@@ -1,11 +1,9 @@
 import Search.MedianOfTwoSortedArrays;
 import Util.ArrayCreation;
-import org.testng.annotations.Test;
 
 import java.util.Arrays;
 
 public class MedianOfTwoSortedArraysTest {
-     @Test
      public  void test(){
          MedianOfTwoSortedArrays find = new MedianOfTwoSortedArrays();
          ArrayCreation creation = new ArrayCreation();

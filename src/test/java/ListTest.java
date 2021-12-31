@@ -2,10 +2,10 @@ import Leetcode.List.AddTwoNumbers;
 import Leetcode.List.ListNode;
 import Util.ArrayCreation;
 import Util.ListCreateWithReverseOrder;
-import org.testng.annotations.Test;
+
 
 public class ListTest {
-    @Test
+
     public void testList() {
         ArrayCreation createArray = new ArrayCreation();
         int[] input = createArray.create(10,10);
@@ -13,7 +13,7 @@ public class ListTest {
         createList.reverseCreate();
     }
 
-    @Test
+
     public void testListSum() {
         ArrayCreation createArray = new ArrayCreation();
         int[] input1 = createArray.create(3,10);

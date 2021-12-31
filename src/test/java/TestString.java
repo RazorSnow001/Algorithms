@@ -1,9 +1,9 @@
 
 import Leetcode.String.IsPalindromic;
-import org.testng.annotations.Test;
+
 
 public class TestString {
-    @Test
+
     public void test() {
         String input = "aa";
         IsPalindromic isPalindromic = new IsPalindromic(input);

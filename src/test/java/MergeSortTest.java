@@ -2,12 +2,11 @@ import RecursionRelated.Recursion.MergeSortParallel;
 import RecursionRelated.Recursion.MergeSort;
 import RecursionRelated.Recursion.Sort;
 import Util.ArrayCreation;
-import org.testng.annotations.Test;
+
 
 import java.util.Arrays;
 
 public class MergeSortTest {
-    @Test
     public void testArray() {
         ArrayCreation creation = new ArrayCreation();
         int[] array = creation.create(10,10);
@@ -16,7 +15,6 @@ public class MergeSortTest {
         System.out.println(Arrays.toString(mergeSort.sortSerial(array)));
     }
 
-    @Test
     public void testParallel() {
         ArrayCreation creation = new ArrayCreation();
         int[] array = creation.create(10,10);
@@ -33,7 +31,6 @@ public class MergeSortTest {
         System.out.println(Arrays.toString(result));
     }
 
-    @Test
     public void testParallelV2() {
         ArrayCreation creation = new ArrayCreation();
         int[] array = creation.create(10,10);
@@ -49,7 +46,6 @@ public class MergeSortTest {
         System.out.println(Arrays.toString(mergeSort.getResultArray()));
     }
 
-    @Test
     public void compare() {
         ArrayCreation creation = new ArrayCreation();
         int[] array = creation.create(15,15);

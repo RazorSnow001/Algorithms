@@ -1,9 +1,9 @@
 import RecursionRelated.Recursion.QuickSort;
 import Util.ArrayCreation;
-import org.testng.annotations.Test;
+
 
 public class TestQuickSort {
-    @Test
+
     public void test() {
         ArrayCreation creation = new ArrayCreation();
         int[] input = creation.create(20, 100);

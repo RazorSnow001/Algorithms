@@ -1,11 +1,11 @@
 import Leetcode.Hash.TwoSum;
 import Leetcode.String.LongestSubstringWithoutRepeatingCharacters;
-import org.testng.annotations.Test;
+
 
 import java.util.Arrays;
 
 public class HashTest {
-    @Test
+
     public void test() {
         TwoSum sum = new TwoSum();
         int[] input = {2, 6, 7, 10};
@@ -13,7 +13,7 @@ public class HashTest {
         System.out.println(Arrays.toString(result));
     }
 
-    @Test
+
     public void testLongestSubstringWithoutRepeatingCharacters() {
         LongestSubstringWithoutRepeatingCharacters longest = new LongestSubstringWithoutRepeatingCharacters();
         String input = "aaabcccbaabcde";
