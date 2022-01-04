@@ -1,6 +1,7 @@
 package Leetcode.Digit;
 
-import org.junit.Test;
+
+import org.junit.jupiter.api.Test;
 
 public class ReverseIntegerAdvanced {
     public int reverse(int x) {
