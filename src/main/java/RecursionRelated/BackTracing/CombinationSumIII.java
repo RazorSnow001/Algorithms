@@ -40,9 +40,9 @@ public class CombinationSumIII {
             return;
         }
 
-        if (number == 0) {
+       /* if (number == 0) {
             result.add(List.copyOf(currentPath));
-        }
+        }*/
 
         int index = begin;
 

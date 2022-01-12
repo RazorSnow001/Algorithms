@@ -25,7 +25,7 @@ public class DP_Bottom_Top {
         Map<Integer, List<Integer>> DPSpace = new HashMap<>();
         for (int i = input.size() - 1; i >= 0; i--) {
             if (Objects.equals(input.size() - 1, i)) {
-                DPSpace.put(i, List.of(input.get(i)));
+                /*DPSpace.put(i, List.of(input.get(i)));*/
                 continue;
             }
             int current = input.get(i);
