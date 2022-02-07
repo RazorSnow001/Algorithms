@@ -35,6 +35,4 @@ public class P0001_TwoSum {
         int[] result = test.twoSum(numbers, 22);
         System.out.println(JSONObject.toJSONString(result));
     }
-
-
 }
